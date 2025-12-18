@@ -679,7 +679,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
             {/* Left: Input Node (Value 4 Value) */}
             <div className="md:w-[35%] flex items-stretch">
               <div
-                className="flex items-center bg-zinc-950 border-zinc-900 p-4 group hover:border-orange-900/40 transition-all cursor-pointer w-full h-full leading-5 tracking-normal justify-start gap-3.5 mx-0 my-0 px-4 py-px rounded-sm border"
+                className="flex items-center gap-4 bg-zinc-950 border border-zinc-900 p-4 group hover:border-orange-900/40 transition-all cursor-pointer w-full h-full"
                 onClick={handleCopy}
               >
                 <div className="bg-orange-900/10 p-3 rounded-full text-orange-700 group-hover:scale-105 transition-transform flex-shrink-0">
@@ -707,11 +707,11 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
             {/* Right: Uplinks & Relays (3 Stacked Rows) */}
             <div className="md:w-[65%] flex flex-col justify-between py-1">
               {/* Row 1: Follow Us */}
-              <div className="flex items-center gap-6 px-0 mx-0 border-2 border-none">
+              <div className="flex items-center gap-6">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   Follow us:
                 </span>
-                <div className="flex gap-4 leading-4 tracking-normal">
+                <div className="flex gap-4">
                   <a
                     href="#"
                     className="flex items-center gap-2 px-3 py-1 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono"
@@ -732,7 +732,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   Subscribe:
                 </span>
-                <div className="flex flex-wrap leading-4 tracking-wide justify-start gap-3.5 mx-0 my-1 border-2 border-none">
+                <div className="flex flex-wrap gap-4">
                   {[
                     { name: "Apple", icon: <Podcast size={12} /> },
                     { name: "Spotify", icon: <Radio size={12} /> },
@@ -757,12 +757,12 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                   RSS Feed:
                 </span>
                 <div
-                  className="flex bg-zinc-950 border-zinc-900 hover:border-zinc-700 transition-colors cursor-pointer group flex-grow max-w-sm items-center flex-row leading-5 tracking-widest text-2xl font-normal justify-start gap-3 mx-0 py-0.5 px-3 rounded-sm my-0.5 border-2"
+                  className="flex items-center gap-3 bg-zinc-950 border border-zinc-900 px-3 py-1.5 hover:border-zinc-700 transition-colors cursor-pointer group flex-grow max-w-sm"
                   onClick={handleCopy}
                 >
                   <Rss size={12} className="text-orange-900 group-hover:text-orange-600 flex-shrink-0" />
                   <code className="text-[11px] font-mono text-zinc-600 group-hover:text-zinc-400 truncate">
-                    https://anchor.fm/s/e0b84134/podcast/rss
+                    yicongzheshi.com/rss.xml
                   </code>
                   <div className="ml-auto text-zinc-800 flex-shrink-0">
                     {copied ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
