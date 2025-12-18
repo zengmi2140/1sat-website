@@ -10,10 +10,7 @@ import {
   Copy,
   Check,
   Zap,
-  Network,
   Shield,
-  BookOpen,
-  User,
   Youtube,
   Podcast,
   Rss,
@@ -22,6 +19,7 @@ import {
   LinkIcon,
   AtSign,
   ChevronLeft,
+  Network,
 } from "lucide-react"
 import { AudioPlayer } from "./audio-player"
 
@@ -41,8 +39,14 @@ interface Episode {
   audioUrl?: string
 }
 
-// --- Components ---
+interface Guest {
+  name: string
+  desc: string
+  twitter: string
+  episodes: string[]
+}
 
+// --- Components ---
 const EpisodeList = ({
   episodes,
   onSelect,
@@ -118,7 +122,14 @@ const EpisodeList = ({
   )
 }
 
-const EpisodeDetail = ({ episode, onBack }: { episode: Episode; onBack: () => void }) => {
+const EpisodeDetail = ({
+  episode,
+  onBack,
+  onEpisodeClick,
+}: { episode: Episode; onBack: () => void; onEpisodeClick: (episodeId: string) => void }) => {
+  const tags = episode.tags || []
+  const takeaways = episode.takeaways || []
+
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
       <button
@@ -159,7 +170,7 @@ const EpisodeDetail = ({ episode, onBack }: { episode: Episode; onBack: () => vo
               <div className="flex flex-wrap items-center gap-3 text-xs">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {episode.tags.map((tag, i) => (
+                  {tags.map((tag, i) => (
                     <span
                       key={i}
                       className="text-[10px] font-mono border border-zinc-800 px-2 py-1 text-zinc-500 uppercase tracking-wider"
@@ -170,7 +181,7 @@ const EpisodeDetail = ({ episode, onBack }: { episode: Episode; onBack: () => vo
                 </div>
 
                 {/* Separator */}
-                {episode.tags.length > 0 && (
+                {tags.length > 0 && (
                   <div className="flex items-center gap-2 font-mono text-zinc-500">
                     {/* Additional separator content here */}
                   </div>
@@ -192,17 +203,32 @@ const EpisodeDetail = ({ episode, onBack }: { episode: Episode; onBack: () => vo
 
           {/* Content Section - Markdown */}
           {episode.content && (
-            <div className="prose prose-invert prose-zinc max-w-none prose-headings:font-mono prose-headings:text-zinc-200 prose-p:font-serif prose-p:text-zinc-400 prose-li:font-serif prose-li:text-zinc-400 prose-a:text-orange-600 prose-a:no-underline hover:prose-a:underline prose-code:font-mono prose-code:text-green-500 prose-code:bg-zinc-900 prose-code:px-1 prose-code:py-0.5 prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-zinc-800 prose-blockquote:border-orange-900/50 prose-blockquote:text-zinc-500 prose-strong:text-zinc-300">
-              <ReactMarkdown>{episode.content}</ReactMarkdown>
+            <div className="prose prose-invert prose-zinc max-w-none prose-headings:font-mono prose-headings:text-zinc-200 prose-p:font-serif prose-p:text-zinc-400 prose-li:font-serif prose-li:text-zinc-400 prose-code:font-mono prose-code:text-green-500 prose-code:bg-zinc-900 prose-code:px-1 prose-code:py-0.5 prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-zinc-800 prose-blockquote:border-orange-900/50 prose-blockquote:text-zinc-500 prose-strong:text-zinc-300">
+              <ReactMarkdown
+                components={{
+                  a: ({ href, children }) => (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-orange-700 underline hover:text-orange-500 transition-colors"
+                    >
+                      {children}
+                    </a>
+                  ),
+                }}
+              >
+                {episode.content}
+              </ReactMarkdown>
             </div>
           )}
 
           {/* Takeaways Section (legacy support) */}
-          {episode.takeaways && episode.takeaways.length > 0 && (
+          {takeaways && takeaways.length > 0 && (
             <div className="bg-zinc-900/50 border border-zinc-800 p-6">
               <h3 className="font-mono text-xs text-orange-700 uppercase tracking-widest mb-4">// Key Takeaways</h3>
               <ul className="space-y-3">
-                {episode.takeaways.map((t, i) => (
+                {takeaways.map((t, i) => (
                   <li key={i} className="flex gap-3 text-sm">
                     <Zap className="w-4 h-4 text-orange-700/50 flex-shrink-0 mt-0.5" />
                     <span className="font-serif text-zinc-400">{t}</span>
@@ -242,62 +268,10 @@ const EpisodeDetail = ({ episode, onBack }: { episode: Episode; onBack: () => vo
   )
 }
 
-const NodesView = ({ onEpisodeClick }: { onEpisodeClick: (epId: string) => void }) => {
+const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick: (episodeId: string) => void }) => {
   const hosts = [
-    { name: "Zeng Mi", role: "Operator / Facilitator", status: "SYNCED", twitter: "@zengmi_btc" },
-    { name: "Ajian", role: "Protocol Researcher", status: "MINING", twitter: "@ajian_bitcoin" },
-  ]
-
-  const guests = [
-    {
-      name: "Burak",
-      desc: "Ark 协议创造者，探索二层扩容新范式。",
-      twitter: "@burak_k",
-      connected: ["E023"],
-      expertise: "Scaling",
-    },
-    {
-      name: "Robin Linus",
-      desc: "BitVM 发明人，ZeroSync 项目联合创始人。",
-      twitter: "@robin_linus",
-      connected: ["E022"],
-      expertise: "Computation",
-    },
-    {
-      name: "Shinobi",
-      desc: "Bitcoin Magazine 技术编辑，硬核挖矿研究。",
-      twitter: "@brian_trollz",
-      connected: ["E018", "E012"],
-      expertise: "Mining",
-    },
-    {
-      name: "Luke Dashjr",
-      desc: "Bitcoin Core 开发者，Ocean 矿池创始人。",
-      twitter: "@LukeDashjr",
-      connected: ["E015"],
-      expertise: "Consensus",
-    },
-    {
-      name: "Gloria Zhao",
-      desc: "Bitcoin Core 维护者，专注于 Mempool 与 P2P。",
-      twitter: "@glozow",
-      connected: ["E012"],
-      expertise: "P2P",
-    },
-    {
-      name: "Peter Todd",
-      desc: "RBF 倡导者，早期核心开发者与安全顾问。",
-      twitter: "@peterktodd",
-      connected: ["E009"],
-      expertise: "Security",
-    },
-  ]
-
-  const resources = [
-    { name: "Bitcoin Optech", url: "bitcoinops.org", desc: "Newsletter for Bitcoin technical developments." },
-    { name: "Mempool.space", url: "mempool.space", desc: "The best block explorer and visualizer." },
-    { name: "Delving Bitcoin", url: "delvingbitcoin.org", desc: "Forum for deep technical discussion." },
-    { name: "BIPs Index", url: "github.com/bitcoin/bips", desc: "Bitcoin Improvement Proposals repository." },
+    { name: "曾汨", role: "Host", twitter: "@zengmi_btc", status: "online" },
+    { name: "阿剑", role: "Host", twitter: "@ajianbtc", status: "online" },
   ]
 
   return (
@@ -314,8 +288,12 @@ const NodesView = ({ onEpisodeClick }: { onEpisodeClick: (epId: string) => void 
               className="border border-zinc-800 bg-zinc-950 p-6 relative overflow-hidden group hover:border-orange-900/30 transition-colors flex justify-between items-center"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-zinc-900 flex items-center justify-center border border-zinc-800">
-                  <User className="w-6 h-6 text-zinc-500" />
+                <div className="w-12 h-12 md:w-20 md:h-20 p-2 bg-zinc-900 flex-shrink-0 group cursor-pointer overflow-hidden">
+                  <img
+                    src="/images/logo.png"
+                    alt="Logo"
+                    className="w-full h-full object-contain brightness-90 group-hover:brightness-110 transition-all duration-300"
+                  />
                 </div>
                 <div>
                   <h3 className="font-mono text-lg text-zinc-200 font-bold">{host.name}</h3>
@@ -348,14 +326,15 @@ const NodesView = ({ onEpisodeClick }: { onEpisodeClick: (epId: string) => void 
           <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">Discovered Peers (Guests)</h2>
         </div>
         <div className="border border-zinc-900 bg-zinc-950/50">
+          {/* Table Header */}
           <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-2 border-b border-zinc-900 text-[10px] font-mono text-zinc-600 uppercase">
             <div className="col-span-2">Peer ID</div>
             <div className="col-span-4">Descriptor (Info)</div>
             <div className="col-span-2">Net Addr</div>
-            <div className="col-span-2">Capabilities</div>
-            <div className="col-span-2 text-right">Channels</div>
+            <div className="col-span-4 text-right">Channels</div>
           </div>
           <div className="divide-y divide-zinc-900">
+            {/* Table Body */}
             {guests.map((guest, idx) => (
               <div
                 key={idx}
@@ -370,17 +349,16 @@ const NodesView = ({ onEpisodeClick }: { onEpisodeClick: (epId: string) => void 
                 <div className="md:col-span-2 flex items-center">
                   <a
                     href={`https://twitter.com/${guest.twitter.replace("@", "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-zinc-600 hover:text-orange-500 text-xs flex items-center gap-1 transition-colors"
                   >
                     <AtSign size={10} />
                     {guest.twitter.replace("@", "")}
                   </a>
                 </div>
-                <div className="md:col-span-2 text-zinc-600 text-xs flex items-center">
-                  <span className="border border-zinc-800 px-1.5 py-0.5 rounded-[2px]">{guest.expertise}</span>
-                </div>
-                <div className="md:col-span-2 flex md:justify-end gap-2 items-center">
-                  {guest.connected.map((epId) => (
+                <div className="md:col-span-4 flex md:justify-end gap-2 items-center flex-wrap">
+                  {guest.episodes.map((epId) => (
                     <button
                       key={epId}
                       onClick={() => onEpisodeClick(epId)}
@@ -394,33 +372,6 @@ const NodesView = ({ onEpisodeClick }: { onEpisodeClick: (epId: string) => void 
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex items-center gap-3 mb-6 border-b border-zinc-800 pb-2">
-          <BookOpen className="w-4 h-4 text-orange-700" />
-          <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">Consensus Data (Resources)</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {resources.map((res, idx) => (
-            <a
-              key={idx}
-              href={`https://${res.url}`}
-              className="flex items-start gap-3 p-3 border border-zinc-900 hover:border-zinc-700 bg-zinc-950 transition-all group"
-            >
-              <div className="mt-1 text-zinc-600 group-hover:text-orange-600 transition-colors">
-                <ExternalLink size={14} />
-              </div>
-              <div>
-                <h4 className="font-mono text-sm text-zinc-300 group-hover:underline decoration-zinc-600 underline-offset-4">
-                  {res.name}
-                </h4>
-                <div className="text-xs font-mono text-zinc-600 mb-1">{res.url}</div>
-                <p className="text-xs font-serif text-zinc-500 italic">{res.desc}</p>
-              </div>
-            </a>
-          ))}
         </div>
       </section>
     </div>
@@ -496,21 +447,24 @@ const ManifestoView = () => (
 // --- Main Client Component ---
 interface ClientPageProps {
   episodes: Episode[]
+  guests: Guest[]
 }
 
-export default function ClientPage({ episodes = [] }: ClientPageProps) {
-  const [currentView, setCurrentView] = useState<"list" | "nodes" | "manifesto" | "detail">("list")
+export default function ClientPage({ episodes = [], guests = [] }: ClientPageProps) {
+  const [currentView, setCurrentView] = useState<"list" | "detail" | "nodes" | "manifesto">("list")
   const [selectedEpisode, setSelectedEpisode] = useState<Episode | null>(null)
-  const [blockHeight, setBlockHeight] = useState(840000)
-  const [nodeCount, setNodeCount] = useState(0)
+  const [blockHeight, setBlockHeight] = useState<number>(840000)
+  const [nodeCount, setNodeCount] = useState<string>("...")
+  const [previousView, setPreviousView] = useState<"list" | "detail" | "nodes" | "manifesto">("list")
   const [copied, setCopied] = useState(false)
   const [searchTerm, setSearchTerm] = useState("")
 
   const fuse = useMemo(() => {
     return new Fuse(episodes, {
       keys: [
-        { name: "title", weight: 0.5 },
-        { name: "tags", weight: 0.3 },
+        { name: "title", weight: 0.3 },
+        { name: "tags", weight: 0.25 },
+        { name: "content", weight: 0.25 },
         { name: "hosts", weight: 0.1 },
         { name: "guests", weight: 0.1 },
       ],
@@ -526,6 +480,31 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
     const results = fuse.search(searchTerm)
     return results.map((result) => result.item)
   }, [searchTerm, fuse, episodes])
+
+  const handleSelectEpisode = (ep: Episode) => {
+    setPreviousView(currentView) // 保存当前视图
+    setSelectedEpisode(ep)
+    setCurrentView("detail")
+    window.scrollTo(0, 0)
+  }
+
+  const handleSelectEpisodeById = (episodeId: string) => {
+    const episode = episodes?.find((ep) => ep.id === episodeId)
+    if (episode) {
+      handleSelectEpisode(episode)
+    }
+  }
+
+  const handleViewChange = (view: "list" | "detail" | "nodes" | "manifesto") => {
+    setPreviousView(currentView)
+    setCurrentView(view)
+  }
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("donate@yicongzheshi.com")
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   useEffect(() => {
     const fetchBlockHeight = async () => {
@@ -546,11 +525,11 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
         const response = await fetch("https://bitnodes.io/api/v1/snapshots/latest/")
         if (response.ok) {
           const data = await response.json()
-          setNodeCount(data.total_nodes || 0)
+          setNodeCount(data.total_nodes || "...")
         }
       } catch (error) {
         console.error("Failed to fetch node count:", error)
-        // 保持初始值 0
+        // 保持初始值 '...'
       }
     }
 
@@ -558,40 +537,15 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
     fetchNodeCount()
   }, [])
 
-  const handleSelectEpisode = (ep: Episode) => {
-    setSelectedEpisode(ep)
-    setCurrentView("detail")
-    window.scrollTo(0, 0)
-  }
-
-  const handleBack = () => {
-    setCurrentView("list")
-    setSelectedEpisode(null)
-  }
-
-  const handleEpisodeClick = (epId: string) => {
-    const foundEp = episodes.find((e) => e.id === epId)
-    if (foundEp) {
-      setSelectedEpisode(foundEp)
-      setCurrentView("detail")
-      window.scrollTo(0, 0)
-    }
-  }
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText("donate@yicongzheshi.com")
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   return (
     <div className="min-h-screen bg-black text-zinc-300 p-4 md:p-8 lg:p-12 selection:bg-orange-500/30 selection:text-orange-200">
       {/* Top Status Bar */}
       <div className="border-b border-zinc-900 bg-zinc-950 px-4 py-2 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest fixed top-0 left-0 right-0 z-50">
         <div className="flex items-center gap-4">
+          \
           <span className="flex items-center gap-1 text-green-600">
             <span className="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span>
-            Node Online: {nodeCount > 0 ? nodeCount.toLocaleString() : "..."}
+            Node Online: {nodeCount}
           </span>
         </div>
         <div className="flex items-center gap-4">
@@ -609,7 +563,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
             <div className="flex items-center gap-6">
               <div
                 className="w-16 h-16 md:w-20 md:h-20 p-2 bg-zinc-950 flex-shrink-0 group cursor-pointer overflow-hidden"
-                onClick={() => setCurrentView("list")}
+                onClick={() => handleViewChange("list")}
               >
                 <img
                   src="/images/logo.png"
@@ -620,7 +574,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
               <div>
                 <h1
                   className="text-3xl md:text-5xl font-bold text-zinc-100 tracking-tighter mb-2 font-mono cursor-pointer"
-                  onClick={() => setCurrentView("list")}
+                  onClick={() => handleViewChange("list")}
                 >
                   <span className="text-orange-700">&lt;</span>
                   亿聪哲史
@@ -634,7 +588,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
             {/* Navigation */}
             <nav className="flex gap-4 text-xs font-bold uppercase tracking-widest">
               <button
-                onClick={() => setCurrentView("list")}
+                onClick={() => handleViewChange("list")}
                 className={`${
                   currentView === "list" || currentView === "detail"
                     ? "text-orange-700 border-b border-orange-700"
@@ -644,7 +598,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
                 Signals
               </button>
               <button
-                onClick={() => setCurrentView("nodes")}
+                onClick={() => handleViewChange("nodes")}
                 className={`${
                   currentView === "nodes"
                     ? "text-orange-700 border-b border-orange-700"
@@ -654,7 +608,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
                 Nodes
               </button>
               <button
-                onClick={() => setCurrentView("manifesto")}
+                onClick={() => handleViewChange("manifesto")}
                 className={`${
                   currentView === "manifesto"
                     ? "text-orange-700 border-b border-orange-700"
@@ -676,8 +630,24 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
               placeholder="search topics, bips, or guests..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="block w-full bg-zinc-950 border border-zinc-800 text-zinc-300 py-3 pl-16 pr-3 focus:outline-none focus:border-orange-800 transition-all font-mono text-sm placeholder:text-zinc-700"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && searchTerm && (currentView === "nodes" || currentView === "manifesto")) {
+                  handleViewChange("list")
+                }
+              }}
+              className="block w-full bg-zinc-950 border border-zinc-800 text-zinc-300 py-3 pl-16 pr-12 focus:outline-none focus:border-orange-800 transition-all font-mono text-sm placeholder:text-zinc-700"
             />
+            {searchTerm && (
+              <button
+                onClick={() => setSearchTerm("")}
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-zinc-600 hover:text-orange-700 transition-colors"
+                aria-label="Clear search"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
           </div>
           {/* Search Result Count */}
           {searchTerm && (
@@ -693,9 +663,13 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
         <main>
           {currentView === "list" && <EpisodeList episodes={filteredEpisodes} onSelect={handleSelectEpisode} />}
           {currentView === "detail" && selectedEpisode && (
-            <EpisodeDetail episode={selectedEpisode} onBack={handleBack} />
+            <EpisodeDetail
+              episode={selectedEpisode}
+              onBack={() => handleViewChange(previousView)}
+              onEpisodeClick={handleSelectEpisodeById}
+            />
           )}
-          {currentView === "nodes" && <NodesView onEpisodeClick={handleEpisodeClick} />}
+          {currentView === "nodes" && <NodesView guests={guests} onEpisodeClick={handleSelectEpisodeById} />}
           {currentView === "manifesto" && <ManifestoView />}
         </main>
 
@@ -799,7 +773,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
           </div>
 
           <div className="mt-16 text-center pb-12">
-            <p className="text-[10px] text-zinc-800 font-mono tracking-[0.3em] uppercase opacity-40">
+            <p className="text-[10px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100">
               Tick Tock, Next Block // Pure Signal // Don't Trust, Verify.
             </p>
           </div>

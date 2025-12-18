@@ -1,6 +1,7 @@
 "use client"
 
 import { getAllEpisodes } from "@/lib/episodes"
+import { getAllGuests } from "@/lib/guests"
 import ClientPage from "@/components/client-page"
 import { Mic, ArrowLeft, ExternalLink, Network, Shield, BookOpen, User, AtSign, LinkIcon } from "lucide-react"
 
@@ -403,6 +404,7 @@ const ManifestoView = () => (
 // --- Main App Component (Server Component) ---
 export default async function Page() {
   const episodes = await getAllEpisodes()
+  const guests = await getAllGuests()
 
-  return <ClientPage episodes={episodes} />
+  return <ClientPage episodes={episodes} guests={guests} />
 }
