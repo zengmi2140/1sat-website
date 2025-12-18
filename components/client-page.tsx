@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react"
 import ReactMarkdown from "react-markdown"
+import rehypeRaw from "rehype-raw"
 import Fuse from "fuse.js"
 import {
   Radio,
@@ -205,6 +206,7 @@ const EpisodeDetail = ({
           {episode.content && (
             <div className="prose prose-invert prose-zinc max-w-none prose-headings:font-mono prose-headings:text-zinc-200 prose-p:font-serif prose-p:text-zinc-400 prose-li:font-serif prose-li:text-zinc-400 prose-code:font-mono prose-code:text-green-500 prose-code:bg-zinc-900 prose-code:px-1 prose-code:py-0.5 prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-zinc-800 prose-blockquote:border-orange-900/50 prose-blockquote:text-zinc-500 prose-strong:text-zinc-300">
               <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
                 components={{
                   a: ({ href, children }) => (
                     <a
