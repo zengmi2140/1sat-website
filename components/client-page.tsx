@@ -561,6 +561,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
   const handleSelectEpisode = (ep: Episode) => {
     setSelectedEpisode(ep)
     setCurrentView("detail")
+    window.scrollTo(0, 0)
   }
 
   const handleBack = () => {
@@ -586,7 +587,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
   return (
     <div className="min-h-screen bg-black text-zinc-300 p-4 md:p-8 lg:p-12 selection:bg-orange-500/30 selection:text-orange-200">
       {/* Top Status Bar */}
-      <div className="border-b border-zinc-900 bg-zinc-950 px-4 py-2 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest sticky top-0 z-50">
+      <div className="border-b border-zinc-900 bg-zinc-950 px-4 py-2 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest fixed top-0 left-0 right-0 z-50">
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1 text-green-600">
             <span className="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span>
@@ -601,7 +602,7 @@ export default function ClientPage({ episodes = [] }: ClientPageProps) {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-8 md:py-16">
+      <div className="max-w-4xl mx-auto px-4 py-8 md:py-16 pt-14 md:pt-20">
         {/* --- Header --- */}
         <header className="mb-12 md:mb-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
