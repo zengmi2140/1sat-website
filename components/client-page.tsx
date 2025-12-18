@@ -627,7 +627,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
             </div>
             <input
               type="text"
-              placeholder="search topics, bips, or guests..."
+              placeholder="search topics, tags, or guests..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={(e) => {
