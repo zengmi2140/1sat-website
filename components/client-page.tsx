@@ -726,22 +726,22 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
             </div>
 
             {/* Right: Uplinks & Relays (3 Stacked Rows) */}
-            <div className="md:w-[65%] flex flex-col justify-between py-1">
+            <div className="md:w-[65%] flex flex-col justify-center gap-3">
               {/* Row 1: Follow Us */}
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-6 h-8">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   Follow us:
                 </span>
                 <div className="flex gap-4">
                   <a
                     href="#"
-                    className="flex items-center gap-2 px-3 py-1 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono"
                   >
                     <Twitter size={12} /> Twitter
                   </a>
                   <a
                     href="#"
-                    className="flex items-center gap-2 px-3 py-1 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono"
                   >
                     <Hash size={12} /> Nostr
                   </a>
@@ -749,7 +749,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
               </div>
 
               {/* Row 2: Subscribe */}
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-6 h-8">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   Subscribe:
                 </span>
@@ -763,7 +763,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                     <a
                       key={platform.name}
                       href="#"
-                      className="flex items-center gap-2 px-2.5 py-1 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
+                      className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
                     >
                       {platform.icon}
                       {platform.name}
@@ -773,7 +773,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
               </div>
 
               {/* Row 3: RSS Feed */}
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-6 h-8">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   RSS Feed:
                 </span>
