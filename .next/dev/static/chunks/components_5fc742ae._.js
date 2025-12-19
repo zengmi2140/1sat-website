@@ -1936,7 +1936,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                href: "#",
+                                                                href: "https://njump.me/npub1uueww5jpx3nxld06uy36tq9cvztteuepxru038vm74kexx7x8sgs44nmra",
                                                                 className: "flex items-center gap-2 px-3 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$hash$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Hash$3e$__["Hash"], {
@@ -1980,7 +1980,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                         className: "flex flex-wrap gap-4",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                href: "#",
+                                                                href: "https://podcasts.apple.com/us/podcast/%E4%BA%BF%E8%81%AA%E5%93%B2%E5%8F%B2/id1691447234",
                                                                 target: "_blank",
                                                                 className: "flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono",
                                                                 children: [
@@ -1999,7 +1999,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                href: "#",
+                                                                href: "https://open.spotify.com/show/7Jx7D82u9oYSA0ktbEyQvY",
                                                                 target: "_blank",
                                                                 className: "flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono",
                                                                 children: [
@@ -2037,7 +2037,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                href: "#",
+                                                                href: "https://www.fountain.fm/show/ZEjkCrSr3JcZTzC8ir29",
                                                                 target: "_blank",
                                                                 className: "flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono",
                                                                 children: [
