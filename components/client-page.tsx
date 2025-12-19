@@ -21,6 +21,7 @@ import {
   AtSign,
   ChevronLeft,
   Network,
+  User,
 } from "lucide-react"
 import { AudioPlayer } from "./audio-player"
 
@@ -284,23 +285,19 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
           <Shield className="w-4 h-4 text-orange-700" />
           <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">Core Nodes (Hosts)</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {hosts.map((host, idx) => (
             <div
               key={idx}
-              className="border border-zinc-800 bg-zinc-950 p-6 relative overflow-hidden group hover:border-orange-900/30 transition-colors flex justify-between items-center"
+              className="border border-zinc-800 bg-zinc-950 px-4 py-3 relative overflow-hidden group hover:border-orange-900/30 transition-colors flex justify-between items-center"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 md:w-20 md:h-20 p-2 bg-zinc-900 flex-shrink-0 group cursor-pointer overflow-hidden">
-                  <img
-                    src="/images/logo.png"
-                    alt="Logo"
-                    className="w-full h-full object-contain brightness-90 group-hover:brightness-110 transition-all duration-300"
-                  />
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 border border-zinc-700 flex items-center justify-center text-zinc-600 flex-shrink-0">
+                  <User size={16} />
                 </div>
                 <div>
-                  <h3 className="font-mono text-lg text-zinc-200 font-bold">{host.name}</h3>
-                  <div className="flex items-center gap-2 mt-1">
+                  <h3 className="font-mono text-sm text-zinc-200 font-bold">{host.name}</h3>
+                  <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-green-600 rounded-full animate-pulse"></span>
                     <span className="font-mono text-[10px] text-zinc-500 uppercase">{host.role}</span>
                   </div>
@@ -310,12 +307,12 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
                 href={`https://twitter.com/${host.twitter.replace("@", "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 border border-zinc-800 hover:border-orange-700 hover:bg-zinc-900 transition-colors group/link"
+                className="flex items-center gap-2 px-2 py-1 border border-zinc-800 hover:border-orange-700 hover:bg-zinc-900 transition-colors group/link"
               >
-                <span className="font-mono text-xs text-zinc-500 group-hover/link:text-orange-500">UPLINK</span>
-                <ExternalLink size={12} className="text-zinc-600 group-hover/link:text-orange-500" />
+                <span className="font-mono text-[10px] text-zinc-500 group-hover/link:text-orange-500">UPLINK</span>
+                <ExternalLink size={10} className="text-zinc-600 group-hover/link:text-orange-500" />
               </a>
-              <div className="absolute -bottom-4 -right-4 text-zinc-900/20 font-mono text-6xl pointer-events-none select-none font-bold">
+              <div className="absolute -bottom-2 -right-2 text-zinc-900/20 font-mono text-4xl pointer-events-none select-none font-bold">
                 0{idx + 1}
               </div>
             </div>
