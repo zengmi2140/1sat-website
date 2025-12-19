@@ -21,7 +21,7 @@ import {
   AtSign,
   ChevronLeft,
   Network,
-  User,
+  Monitor,
 } from "lucide-react"
 import { AudioPlayer } from "./audio-player"
 
@@ -293,7 +293,7 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
             >
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 border border-zinc-700 flex items-center justify-center text-zinc-600 flex-shrink-0">
-                  <User size={16} />
+                  <Monitor size={16} />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
