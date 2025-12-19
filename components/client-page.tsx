@@ -813,11 +813,11 @@ export default function ClientPage({
             {/* Right: Uplinks & Relays (3 Stacked Rows) */}
             <div className="md:w-[65%] flex flex-col justify-center gap-3">
               {/* Row 1: Follow Us */}
-              <div className="flex items-center gap-6 h-8">
+              <div className="flex flex-wrap items-center gap-3 md:gap-6">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   Follow us:
                 </span>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-2 md:gap-4">
                   <a
                     href="https://x.com/1satpod"
                     className="flex items-center gap-2 px-3 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono"
@@ -834,11 +834,11 @@ export default function ClientPage({
               </div>
 
               {/* Row 2: Subscribe */}
-              <div className="flex items-center gap-6 h-8">
+              <div className="flex flex-wrap items-center gap-3 md:gap-6">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   Subscribe:
                 </span>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 md:gap-4">
                   {/* Apple Podcasts 链接 */}
                   <a
                     href="https://podcasts.apple.com/us/podcast/%E4%BA%BF%E8%81%AA%E5%93%B2%E5%8F%B2/id1691447234"
@@ -857,7 +857,7 @@ export default function ClientPage({
                   </a>
                   {/* YouTube 链接 */}
                   <a
-                    href="#"
+                    href="https://www.youtube.com/channel/UCwfpdSLItOAAFDRAXgqhaVg"
                     target="_blank"
                     className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
                   >
@@ -875,7 +875,7 @@ export default function ClientPage({
               </div>
 
               {/* Row 3: RSS Feed */}
-              <div className="flex items-center gap-6 h-8">
+              <div className="flex flex-wrap items-center gap-3 md:gap-6">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   RSS Feed:
                 </span>
