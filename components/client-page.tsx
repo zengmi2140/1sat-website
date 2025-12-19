@@ -275,8 +275,8 @@ const EpisodeDetail = ({
 
 const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick: (episodeId: string) => void }) => {
   const hosts = [
-    { name: "曾汨", role: "Host, Bitcoin Maximalism", twitter: "@zengmi_btc", status: "online" },
-    { name: "阿剑", role: "Host, Bitcoin Maximalism", twitter: "@ajianbtc", status: "online" },
+    { name: "曾汨", role: "Host, Bitcoin Maximalism", twitter: "@zengmi2140", status: "online" },
+    { name: "阿剑", role: "Host, Bitcoin Maximalism", twitter: "@AurtrianAjian", status: "online" },
   ]
 
   return (
@@ -300,7 +300,7 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
                   <div className="flex items-center gap-2">
                     <h3 className="font-mono text-sm text-zinc-200 font-bold">{host.name}</h3>
                     <span className="w-1.5 h-1.5 bg-green-600 rounded-full animate-pulse"></span>
-                    <span className="font-mono text-[10px] text-zinc-500">{host.role}</span>
+                    <span className="font-mono text-xs text-zinc-500">{host.role}</span>
                   </div>
                 </div>
               </div>
