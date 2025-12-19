@@ -705,27 +705,29 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
         <footer className="mt-20 border-t border-zinc-900 pt-10">
           <div className="flex flex-col md:flex-row justify-between items-stretch gap-10">
             {/* Left: Input Node (Value 4 Value) */}
-            <div className="md:w-[35%] flex flex-col justify-end">
-              <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mb-3">
-                Value 4 Value
-              </span>
+            <div className="md:w-[35%] flex items-stretch">
               <div
-                className="flex items-center gap-4 bg-zinc-950 border border-zinc-900 p-4 group hover:border-orange-900/40 transition-all cursor-pointer"
+                className="flex flex-col bg-zinc-950 border border-zinc-900 p-4 group hover:border-orange-900/40 transition-all cursor-pointer w-full h-full"
                 onClick={handleCopyLightning}
               >
-                <div className="bg-orange-900/20 p-2.5 text-orange-600 flex-shrink-0">
-                  <Zap size={18} fill="currentColor" />
-                </div>
-                <div className="flex flex-col justify-center min-w-0 flex-grow">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">
-                    Lightning Address
-                  </span>
-                  <code className="text-[13px] text-zinc-300 font-mono tracking-tight">
-                    donate@yicongzheshi.com
-                  </code>
-                </div>
-                <div className="text-zinc-600 group-hover:text-zinc-400 flex-shrink-0">
-                  {copiedLightning ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+                <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mb-3">
+                  Value 4 Value
+                </span>
+                <div className="flex items-center gap-4 flex-grow">
+                  <div className="bg-orange-900/20 p-2.5 text-orange-600 flex-shrink-0">
+                    <Zap size={18} fill="currentColor" />
+                  </div>
+                  <div className="flex flex-col justify-center min-w-0 flex-grow">
+                    <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">
+                      Lightning Address
+                    </span>
+                    <code className="text-[13px] text-zinc-300 font-mono tracking-tight">
+                      donate@yicongzheshi.com
+                    </code>
+                  </div>
+                  <div className="text-zinc-600 group-hover:text-zinc-400 flex-shrink-0">
+                    {copiedLightning ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+                  </div>
                 </div>
               </div>
             </div>
