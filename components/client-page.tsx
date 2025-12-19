@@ -839,6 +839,7 @@ export default function ClientPage({
                   Subscribe:
                 </span>
                 <div className="flex flex-wrap gap-4">
+                  {/* Apple Podcasts 链接 */}
                   <a
                     href="#"
                     target="_blank"
@@ -846,6 +847,7 @@ export default function ClientPage({
                   >
                     <Podcast size={12} /> Apple
                   </a>
+                  {/* Spotify 链接 */}
                   <a
                     href="#"
                     target="_blank"
@@ -853,6 +855,7 @@ export default function ClientPage({
                   >
                     <Radio size={12} /> Spotify
                   </a>
+                  {/* YouTube 链接 */}
                   <a
                     href="#"
                     target="_blank"
@@ -860,6 +863,7 @@ export default function ClientPage({
                   >
                     <Youtube size={12} /> YouTube
                   </a>
+                  {/* Fountain 链接 */}
                   <a
                     href="#"
                     target="_blank"
