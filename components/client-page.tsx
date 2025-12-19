@@ -218,6 +218,7 @@ const EpisodeDetail = ({
                       {children}
                     </a>
                   ),
+                  br: () => <br className="block" />,
                 }}
               >
                 {episode.content}
