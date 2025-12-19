@@ -524,14 +524,28 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
     }
 
     const fetchNodeCount = async () => {
+      // 主数据源：Bitnodes
       try {
         const response = await fetch("https://bitnodes.io/api/v1/snapshots/latest/")
         if (response.ok) {
           const data = await response.json()
           setNodeCount(data.total_nodes || "...")
+          return
         }
       } catch (error) {
-        console.error("Failed to fetch node count:", error)
+        console.error("Failed to fetch from Bitnodes:", error)
+      }
+
+      // 备用数据源：Blockchair
+      try {
+        const response = await fetch("https://api.blockchair.com/bitcoin/stats")
+        if (response.ok) {
+          const data = await response.json()
+          setNodeCount(data.data?.nodes || "...")
+          return
+        }
+      } catch (error) {
+        console.error("Failed to fetch from Blockchair:", error)
         // 保持初始值 '...'
       }
     }
@@ -545,16 +559,26 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
       {/* Top Status Bar */}
       <div className="border-b border-zinc-900 bg-zinc-950 px-4 py-2 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest fixed top-0 left-0 right-0 z-50">
         <div className="flex items-center gap-4">
-          <span className="flex items-center gap-1 text-green-600">
+          <a
+            href="https://bitnodes.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-green-600 hover:underline hover:decoration-green-600 transition-all"
+          >
             <span className="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span>
             Node Online: {nodeCount}
-          </span>
+          </a>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-orange-700 font-bold flex items-center gap-2">
+          <a
+            href="https://mempool.space/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-700 font-bold flex items-center gap-2 hover:underline hover:decoration-orange-700 transition-all"
+          >
             <Cpu size={12} />
             BLOCK: {blockHeight.toLocaleString()}
-          </span>
+          </a>
         </div>
       </div>
 
