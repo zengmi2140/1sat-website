@@ -309,7 +309,7 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-2 py-1 border border-zinc-800 hover:border-orange-700 hover:bg-zinc-900 transition-colors group/link"
               >
-                <span className="font-mono text-[10px] text-zinc-500 group-hover/link:text-orange-500">UPLINK</span>
+                <span className="font-mono text-[10px] text-zinc-500 group-hover/link:text-orange-500">TWITTER</span>
                 <ExternalLink size={10} className="text-zinc-600 group-hover/link:text-orange-500" />
               </a>
               <div className="absolute -bottom-2 -right-2 text-zinc-900/20 font-mono text-4xl pointer-events-none select-none font-bold">
