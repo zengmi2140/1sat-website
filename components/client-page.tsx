@@ -300,7 +300,7 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
                   <div className="flex items-center gap-2">
                     <h3 className="font-mono text-sm text-zinc-200 font-bold">{host.name}</h3>
                     <span className="w-1.5 h-1.5 bg-green-600 rounded-full animate-pulse"></span>
-                    <span className="font-mono text-[10px] text-zinc-500 uppercase">{host.role}</span>
+                    <span className="font-mono text-[10px] text-zinc-500">{host.role}</span>
                   </div>
                 </div>
               </div>
