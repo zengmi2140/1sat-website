@@ -459,7 +459,8 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
   const [blockHeight, setBlockHeight] = useState<number>(840000)
   const [nodeCount, setNodeCount] = useState<string>("...")
   const [previousView, setPreviousView] = useState<"list" | "detail" | "nodes" | "manifesto">("list")
-  const [copied, setCopied] = useState(false)
+  const [copiedLightning, setCopiedLightning] = useState(false)
+  const [copiedRss, setCopiedRss] = useState(false)
   const [searchTerm, setSearchTerm] = useState("")
 
   const fuse = useMemo(() => {
@@ -503,10 +504,16 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
     setCurrentView(view)
   }
 
-  const handleCopy = () => {
+  const handleCopyLightning = () => {
     navigator.clipboard.writeText("donate@yicongzheshi.com")
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    setCopiedLightning(true)
+    setTimeout(() => setCopiedLightning(false), 2000)
+  }
+
+  const handleCopyRss = () => {
+    navigator.clipboard.writeText("https://yicongzheshi.com/rss.xml")
+    setCopiedRss(true)
+    setTimeout(() => setCopiedRss(false), 2000)
   }
 
   useEffect(() => {
@@ -701,7 +708,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
             <div className="md:w-[35%] flex items-stretch">
               <div
                 className="flex items-center gap-4 bg-zinc-950 border border-zinc-900 p-4 group hover:border-orange-900/40 transition-all cursor-pointer w-full h-full"
-                onClick={handleCopy}
+                onClick={handleCopyLightning}
               >
                 <div className="bg-orange-900/10 p-3 rounded-full text-orange-700 group-hover:scale-105 transition-transform flex-shrink-0">
                   <Zap size={22} fill="currentColor" />
@@ -712,7 +719,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                       Lightning Address
                     </span>
                     <div className="text-zinc-700 group-hover:text-zinc-500 flex-shrink-0">
-                      {copied ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
+                      {copiedLightning ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
                     </div>
                   </div>
                   <code className="text-[13px] text-zinc-400 font-mono tracking-tight truncate">
@@ -779,14 +786,14 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                 </span>
                 <div
                   className="flex items-center gap-3 bg-zinc-950 border border-zinc-900 px-3 py-1.5 hover:border-zinc-700 transition-colors cursor-pointer group flex-grow max-w-sm"
-                  onClick={handleCopy}
+                  onClick={handleCopyRss}
                 >
                   <Rss size={12} className="text-orange-900 group-hover:text-orange-600 flex-shrink-0" />
                   <code className="text-[11px] font-mono text-zinc-600 group-hover:text-zinc-400 truncate">
                     yicongzheshi.com/rss.xml
                   </code>
                   <div className="ml-auto text-zinc-800 flex-shrink-0">
-                    {copied ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
+                    {copiedRss ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
                   </div>
                 </div>
               </div>
