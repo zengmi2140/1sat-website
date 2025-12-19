@@ -549,7 +549,7 @@ export default function ClientPage({
   };
 
   const handleCopyLightning = () => {
-    navigator.clipboard.writeText("donate@yicongzheshi.com");
+    navigator.clipboard.writeText("1sat@fountain.fm");
     setCopiedLightning(true);
     setTimeout(() => setCopiedLightning(false), 2000);
   };
@@ -796,7 +796,7 @@ export default function ClientPage({
                       Lightning Address
                     </span>
                     <code className="text-[13px] text-zinc-300 font-mono tracking-tight">
-                      donate@yicongzheshi.com
+                      1sat@fountain.fm
                     </code>
                   </div>
                   <div className="text-zinc-600 group-hover:text-zinc-400 flex-shrink-0">

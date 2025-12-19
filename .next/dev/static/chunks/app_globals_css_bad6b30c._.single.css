@@ -31,9 +31,6 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-animation-delay: 0s;
       --tw-animation-direction: normal;
       --tw-animation-duration: initial;
@@ -1020,16 +1017,6 @@
     }
   }
 
-  .bg-orange-900\/10 {
-    background-color: #7e2a0c1a;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-orange-900\/10 {
-      background-color: color-mix(in oklab, var(--color-orange-900) 10%, transparent);
-    }
-  }
-
   .bg-orange-900\/20 {
     background-color: #7e2a0c33;
   }
@@ -1527,15 +1514,6 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:scale-105:is(:where(.group):hover *) {
-      --tw-scale-x: 105%;
-      --tw-scale-y: 105%;
-      --tw-scale-z: 105%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:border-zinc-700:is(:where(.group):hover *) {
       border-color: var(--color-zinc-700);
     }
@@ -1574,12 +1552,6 @@
   @media (hover: hover) {
     .group-hover\:text-zinc-400:is(:where(.group):hover *) {
       color: var(--color-zinc-400);
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:text-zinc-500:is(:where(.group):hover *) {
-      color: var(--color-zinc-500);
     }
   }
 
@@ -2405,24 +2377,6 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
 
 @keyframes pulse {
