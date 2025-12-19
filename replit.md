@@ -1,119 +1,119 @@
-# YiCongZheShi (亿聪哲史) - Bitcoin Podcast Website
+# 亿聪哲史 (YiCongZheShi) - 比特币播客网站
 
-## Overview
+## 概述
 
-This is a Next.js website for YiCongZheShi (亿聪哲史), a Chinese-language Bitcoin-only podcast. The site displays podcast episodes, guest information, and provides audio playback functionality. The project follows a content-driven architecture where episodes and guest data are stored as Markdown files with YAML frontmatter, parsed at build time for static generation.
+这是亿聪哲史的 Next.js 网站，一档中文比特币播客。网站展示播客单集、嘉宾信息，并提供音频播放功能。项目采用内容驱动架构，单集和嘉宾数据以 Markdown 文件存储，带有 YAML 前置元数据，在构建时解析用于静态生成。
 
-## User Preferences
+## 用户偏好
 
-Preferred communication style: Simple, everyday language (中文).
+首选沟通方式：简单、日常的语言（中文）。
 
-## System Architecture
+## 系统架构
 
-### Frontend Framework
-- **Next.js 16** with App Router and React Server Components
-- Server-side rendering for episode and guest data fetching
-- Client components for interactive features (audio player, search, navigation)
+### 前端框架
+- **Next.js 16** 使用 App Router 和 React Server Components
+- 服务端渲染用于获取单集和嘉宾数据
+- 客户端组件用于交互功能（音频播放器、搜索、导航）
 
-### Styling Approach
-- **Tailwind CSS** with custom CSS variables for theming
-- **shadcn/ui** component library (New York style variant)
-- Dark-mode-only design with "Cypherpunk Rationalism" aesthetic
-- Custom fonts: IBM Plex Mono (monospace) and Libre Baskerville (serif)
-- Color scheme: Dark zinc backgrounds, orange accents (#c2410c), green status indicators
+### 样式方案
+- **Tailwind CSS** 带自定义 CSS 变量用于主题
+- **shadcn/ui** 组件库（New York 风格变体）
+- 纯深色模式设计，"赛博朋克理性主义"美学
+- 自定义字体：IBM Plex Mono（等宽）和 Libre Baskerville（衬线）
+- 配色方案：深色 zinc 背景、橙色强调色 (#c2410c)、绿色状态指示
 
-### Content Management
-- File-based content system using Markdown files in `/content/` directory
-- Episodes stored in `/content/episodes/` as individual `.md` files (E00.md, E01.md, etc.)
-- Guest data stored in `/content/guests/guests.md` as embedded YAML
-- **gray-matter** library parses YAML frontmatter from Markdown files
-- Episode metadata includes: id, title, date, duration, hosts, guests, tags, audioUrl, status
+### 内容管理
+- 基于文件的内容系统，使用 `/content/` 目录下的 Markdown 文件
+- 单集存储在 `/content/episodes/` 目录，每集一个 `.md` 文件（E00.md、E01.md 等）
+- 嘉宾数据存储在 `/content/guests/guests.md`，使用嵌入式 YAML
+- **gray-matter** 库解析 Markdown 文件的 YAML 前置元数据
+- 单集元数据包括：id、title、date、duration、hosts、guests、tags、audioUrl、status
 
-### Search Functionality
-- **Fuse.js** for client-side fuzzy search across episodes
+### 搜索功能
+- **Fuse.js** 用于客户端模糊搜索单集
 
-### Audio Player
-- Custom React audio player component with play/pause, progress bar, and time display
-- Audio files hosted externally on Anchor.fm/Cloudfront CDN
+### 音频播放器
+- 自定义 React 音频播放器组件，带播放/暂停、进度条和时间显示
+- 音频文件托管在 Anchor.fm/Cloudfront CDN
 
-### Key Components
-- `app/page.tsx` - Server component that fetches all episodes and guests
-- `components/client-page.tsx` - Main client component handling UI, navigation, and search
-- `components/audio-player.tsx` - Custom audio playback controls
-- `lib/episodes.ts` - Server-side episode parsing from Markdown files
-- `lib/guests.ts` - Server-side guest parsing from YAML in Markdown
+### 核心组件
+- `app/page.tsx` - 服务端组件，获取所有单集和嘉宾
+- `components/client-page.tsx` - 主客户端组件，处理 UI、导航和搜索
+- `components/audio-player.tsx` - 自定义音频播放控件
+- `lib/episodes.ts` - 服务端从 Markdown 文件解析单集
+- `lib/guests.ts` - 服务端从 Markdown 中的 YAML 解析嘉宾
 
-### Data Flow
-1. Server fetches and parses all Markdown files at request/build time
-2. Parsed data passed to client components as props
-3. Client handles interactive filtering, search, and audio playback
+### 数据流
+1. 服务端在请求/构建时获取并解析所有 Markdown 文件
+2. 解析后的数据作为 props 传递给客户端组件
+3. 客户端处理交互式筛选、搜索和音频播放
 
-## UI Features
+## UI 功能
 
-### Status Bar (Top)
-- Real-time Bitcoin network data display
-- **NODE ONLINE**: Fetches node count from Bitnodes.io API (2s timeout, fallback: "24000+")
-- **BLOCK**: Current block height from mempool.space API
-- Clickable links with hover underline effects (green for nodes, orange for block)
+### 状态栏（顶部）
+- 实时比特币网络数据展示
+- **NODE ONLINE**：从 Bitnodes.io API 获取节点数量（2秒超时，回退值："24000+"）
+- **BLOCK**：从 mempool.space API 获取当前区块高度
+- 可点击链接，悬停时显示下划线效果（节点为绿色，区块为橙色）
 
-### Navigation Views
-- **Blocks (Episodes)**: Main episode list with blockchain-style block cards
-- **Nodes (Hosts & Guests)**: Core Nodes (hosts) and Discovered Peers (guests)
-- **Manifesto**: About page with podcast philosophy
+### 导航视图
+- **Blocks（单集）**：主单集列表，区块链风格的区块卡片
+- **Nodes（主持人和嘉宾）**：Core Nodes（主持人）和 Discovered Peers（嘉宾）
+- **Manifesto**：关于页面，播客理念
 
-### Core Nodes (Hosts) Cards
-- Two hosts: 曾汨 and 阿剑
-- Icons: Computer (曾汨), Server (阿剑)
-- Role description: "Host, Bitcoin Maximalism"
-- Twitter links configured in `components/client-page.tsx` (lines 278-279)
+### Core Nodes（主持人）卡片
+- 两位主持人：曾汨 和 阿剑
+- 图标：Computer（曾汨）、Server（阿剑）
+- 角色描述："Host, Bitcoin Maximalism"
+- Twitter 链接配置在 `components/client-page.tsx`（第 278-279 行）
 
-### Footer Structure
-Located in `components/client-page.tsx` (lines 813-900):
-- **Value 4 Value**: Lightning Address for donations (yicongzheshi@getalby.com)
-- **Follow Us**: Twitter and Nostr links (lines 821-832)
-- **Subscribe**: Platform links with Chinese comments for easy identification
-  - Apple Podcasts (line 847)
-  - Spotify (line 855)
-  - YouTube (line 863)
-  - Fountain (line 871)
-- **RSS Feed**: Anchor.fm RSS link with copy functionality
+### 页脚结构
+位于 `components/client-page.tsx`（第 813-900 行）：
+- **Value 4 Value**：闪电网络地址用于捐赠（yicongzheshi@getalby.com）
+- **Follow Us**：Twitter 和 Nostr 链接（第 821-832 行）
+- **Subscribe**：平台链接，带中文注释便于识别
+  - Apple Podcasts（第 847 行）
+  - Spotify（第 855 行）
+  - YouTube（第 863 行）
+  - Fountain（第 871 行）
+- **RSS Feed**：Anchor.fm RSS 链接，带复制功能
 
-## External Dependencies
+## 外部依赖
 
-### Hosting & Deployment
-- **Vercel** for hosting and automatic deployments
-- **v0.app** integration for AI-assisted development (syncs changes automatically)
+### 托管与部署
+- **Vercel** 用于托管和自动部署
+- **v0.app** 集成用于 AI 辅助开发（自动同步更改）
 
-### Analytics
-- **@vercel/analytics** for website analytics
+### 分析
+- **@vercel/analytics** 用于网站分析
 
-### Audio Hosting
-- Episode audio files hosted on **Anchor.fm** (Spotify for Podcasters)
-- CDN delivery via Cloudfront
-- RSS Feed: https://anchor.fm/s/e0b84134/podcast/rss
+### 音频托管
+- 单集音频文件托管在 **Anchor.fm**（Spotify for Podcasters）
+- 通过 Cloudfront CDN 分发
+- RSS Feed：https://anchor.fm/s/e0b84134/podcast/rss
 
-### External APIs
-- **Bitnodes.io**: Bitcoin node count (https://bitnodes.io/api/v1/snapshots/latest/)
-- **Mempool.space**: Current block height (https://mempool.space/api/blocks/tip/height)
+### 外部 API
+- **Bitnodes.io**：比特币节点数量（https://bitnodes.io/api/v1/snapshots/latest/）
+- **Mempool.space**：当前区块高度（https://mempool.space/api/blocks/tip/height）
 
-### UI Components
-- **Radix UI** primitives for accessible components
-- **Lucide React** for icons (Computer, Server, Monitor, Podcast, Radio, Youtube, Zap, etc.)
-- **react-markdown** with **rehype-raw** for Markdown rendering with HTML support
-- **embla-carousel-react** for carousels
-- **cmdk** for command palette functionality
+### UI 组件
+- **Radix UI** 原语用于无障碍组件
+- **Lucide React** 图标库（Computer、Server、Monitor、Podcast、Radio、Youtube、Zap 等）
+- **react-markdown** 配合 **rehype-raw** 用于 Markdown 渲染，支持 HTML
+- **embla-carousel-react** 用于轮播
+- **cmdk** 用于命令面板功能
 
-### No Database
-- This project uses file-based content storage only
-- No database integration currently exists
+### 无数据库
+- 本项目仅使用基于文件的内容存储
+- 目前没有数据库集成
 
-## Quick Reference: Key Code Locations
+## 快速参考：关键代码位置
 
-| Feature | File | Lines |
-|---------|------|-------|
-| Hosts data | `components/client-page.tsx` | 278-279 |
-| Status bar | `components/client-page.tsx` | 560-615 |
-| Footer links | `components/client-page.tsx` | 813-900 |
-| Subscribe platforms | `components/client-page.tsx` | 845-877 |
-| Episode parsing | `lib/episodes.ts` | - |
-| Guest parsing | `lib/guests.ts` | - |
+| 功能 | 文件 | 行号 |
+|------|------|------|
+| 主持人数据 | `components/client-page.tsx` | 278-279 |
+| 状态栏 | `components/client-page.tsx` | 560-615 |
+| 页脚链接 | `components/client-page.tsx` | 813-900 |
+| 订阅平台 | `components/client-page.tsx` | 845-877 |
+| 单集解析 | `lib/episodes.ts` | - |
+| 嘉宾解析 | `lib/guests.ts` | - |
