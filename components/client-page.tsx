@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useMemo } from "react"
-import ReactMarkdown from "react-markdown"
-import rehypeRaw from "rehype-raw"
-import Fuse from "fuse.js"
+import { useState, useEffect, useMemo } from "react";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import Fuse from "fuse.js";
 import {
   Radio,
   Hash,
@@ -23,30 +23,30 @@ import {
   Network,
   Server,
   Computer,
-} from "lucide-react"
-import { AudioPlayer } from "./audio-player"
+} from "lucide-react";
+import { AudioPlayer } from "./audio-player";
 
 // --- Types ---
 interface Episode {
-  id: string
-  title: string
-  date: string
-  duration: string
-  category: string
-  hosts: string
-  tags: string[]
-  summary: string
-  takeaways: string[]
-  content?: string
-  slug?: string
-  audioUrl?: string
+  id: string;
+  title: string;
+  date: string;
+  duration: string;
+  category: string;
+  hosts: string;
+  tags: string[];
+  summary: string;
+  takeaways: string[];
+  content?: string;
+  slug?: string;
+  audioUrl?: string;
 }
 
 interface Guest {
-  name: string
-  desc: string
-  twitter: string
-  episodes: string[]
+  name: string;
+  desc: string;
+  twitter: string;
+  episodes: string[];
 }
 
 // --- Components ---
@@ -54,8 +54,8 @@ const EpisodeList = ({
   episodes,
   onSelect,
 }: {
-  episodes: Episode[]
-  onSelect: (ep: Episode) => void
+  episodes: Episode[];
+  onSelect: (ep: Episode) => void;
 }) => {
   // 如果 episodes 是 undefined 或空数组，显示提示信息
   if (!episodes || episodes.length === 0) {
@@ -63,7 +63,7 @@ const EpisodeList = ({
       <div className="w-full text-center py-20 text-zinc-600 font-mono">
         <div className="text-sm">// No episodes found</div>
       </div>
-    )
+    );
   }
 
   return (
@@ -87,14 +87,18 @@ const EpisodeList = ({
           >
             {/* Height (EP#) */}
             <div className="md:col-span-1 flex items-center md:block">
-              <span className="md:hidden text-zinc-600 font-mono text-xs mr-2">EP:</span>
+              <span className="md:hidden text-zinc-600 font-mono text-xs mr-2">
+                EP:
+              </span>
               <span className="font-mono text-orange-700/80 group-hover:text-orange-500 transition-colors">
                 {ep.id}
               </span>
             </div>
 
             {/* Date */}
-            <div className="md:col-span-2 flex items-center text-zinc-500 font-mono text-xs">{ep.date}</div>
+            <div className="md:col-span-2 flex items-center text-zinc-500 font-mono text-xs">
+              {ep.date}
+            </div>
 
             {/* Topic */}
             <div className="md:col-span-5 text-zinc-300 font-mono text-sm group-hover:text-white font-bold truncate">
@@ -102,7 +106,9 @@ const EpisodeList = ({
             </div>
 
             {/* Size (Duration Only) */}
-            <div className="md:col-span-1 flex items-center text-zinc-500 font-mono text-xs">{ep.duration}</div>
+            <div className="md:col-span-1 flex items-center text-zinc-500 font-mono text-xs">
+              {ep.duration}
+            </div>
 
             {/* OP_RETURN (Tags) */}
             <div className="md:col-span-3 flex items-center gap-2 overflow-hidden">
@@ -115,23 +121,29 @@ const EpisodeList = ({
                     {tag}
                   </span>
                 ))}
-                {ep.tags.length > 2 && <span className="text-[10px] text-zinc-700">...</span>}
+                {ep.tags.length > 2 && (
+                  <span className="text-[10px] text-zinc-700">...</span>
+                )}
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const EpisodeDetail = ({
   episode,
   onBack,
   onEpisodeClick,
-}: { episode: Episode; onBack: () => void; onEpisodeClick: (episodeId: string) => void }) => {
-  const tags = episode.tags || []
-  const takeaways = episode.takeaways || []
+}: {
+  episode: Episode;
+  onBack: () => void;
+  onEpisodeClick: (episodeId: string) => void;
+}) => {
+  const tags = episode.tags || [];
+  const takeaways = episode.takeaways || [];
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
@@ -158,17 +170,25 @@ const EpisodeDetail = ({
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="flex-1 space-y-4">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="font-mono text-orange-600 text-xl">BLOCK {episode.id}</span>
+                <span className="font-mono text-orange-600 text-xl">
+                  BLOCK {episode.id}
+                </span>
                 <span className="font-mono text-zinc-600 text-xs">|</span>
-                <span className="font-mono text-zinc-500 text-xs">MINED: {episode.date}</span>
+                <span className="font-mono text-zinc-500 text-xs">
+                  MINED: {episode.date}
+                </span>
                 <span className="font-mono text-zinc-600 text-xs">|</span>
-                <span className="font-mono text-zinc-500 text-xs">SIZE: {episode.duration}</span>
+                <span className="font-mono text-zinc-500 text-xs">
+                  SIZE: {episode.duration}
+                </span>
                 <span className="bg-zinc-800 text-zinc-400 font-mono text-[10px] px-2 py-0.5 uppercase tracking-wider">
                   {episode.category}
                 </span>
               </div>
 
-              <h1 className="text-2xl md:text-3xl font-serif text-zinc-100 leading-tight">{episode.title}</h1>
+              <h1 className="text-2xl md:text-3xl font-serif text-zinc-100 leading-tight">
+                {episode.title}
+              </h1>
 
               <div className="flex flex-wrap items-center gap-3 text-xs">
                 {/* Tags */}
@@ -201,7 +221,9 @@ const EpisodeDetail = ({
 
           {/* Summary Section */}
           <div className="border-l-2 border-orange-900/50 pl-4 py-2">
-            <p className="font-serif text-zinc-400 italic leading-relaxed">{episode.summary}</p>
+            <p className="font-serif text-zinc-400 italic leading-relaxed">
+              {episode.summary}
+            </p>
           </div>
 
           {/* Content Section - Markdown */}
@@ -231,7 +253,9 @@ const EpisodeDetail = ({
           {/* Takeaways Section (legacy support) */}
           {takeaways && takeaways.length > 0 && (
             <div className="bg-zinc-900/50 border border-zinc-800 p-6">
-              <h3 className="font-mono text-xs text-orange-700 uppercase tracking-widest mb-4">// Key Takeaways</h3>
+              <h3 className="font-mono text-xs text-orange-700 uppercase tracking-widest mb-4">
+                // Key Takeaways
+              </h3>
               <ul className="space-y-3">
                 {takeaways.map((t, i) => (
                   <li key={i} className="flex gap-3 text-sm">
@@ -242,25 +266,42 @@ const EpisodeDetail = ({
               </ul>
             </div>
           )}
-
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick: (episodeId: string) => void }) => {
+const NodesView = ({
+  guests,
+  onEpisodeClick,
+}: {
+  guests: Guest[];
+  onEpisodeClick: (episodeId: string) => void;
+}) => {
   const hosts = [
-    { name: "曾汨", role: "Host, Bitcoin Maximalism", twitter: "@zengmi2140", status: "online" },
-    { name: "阿剑", role: "Host, Bitcoin Maximalism", twitter: "@AurtrianAjian", status: "online" },
-  ]
+    {
+      name: "曾汨",
+      role: "Host, Bitcoin Maximalism",
+      twitter: "@zengmi2140",
+      status: "online",
+    },
+    {
+      name: "阿剑",
+      role: "Host, Bitcoin Maximalism",
+      twitter: "@AurtrianAjian",
+      status: "online",
+    },
+  ];
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-12">
       <section>
         <div className="flex items-center gap-3 mb-6 border-b border-zinc-800 pb-2">
           <Shield className="w-4 h-4 text-orange-700" />
-          <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">Core Nodes (Hosts)</h2>
+          <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">
+            Core Nodes (Hosts)
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {hosts.map((host, idx) => (
@@ -274,9 +315,13 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-mono text-sm text-zinc-200 font-bold">{host.name}</h3>
+                    <h3 className="font-mono text-sm text-zinc-200 font-bold">
+                      {host.name}
+                    </h3>
                     <span className="w-1.5 h-1.5 bg-green-600 rounded-full animate-pulse"></span>
-                    <span className="font-mono text-xs text-zinc-500">{host.role}</span>
+                    <span className="font-mono text-xs text-zinc-500">
+                      {host.role}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -286,8 +331,13 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-2 py-1 border border-zinc-800 hover:border-orange-700 hover:bg-zinc-900 transition-colors group/link"
               >
-                <span className="font-mono text-[10px] text-zinc-500 group-hover/link:text-orange-500">TWITTER</span>
-                <ExternalLink size={10} className="text-zinc-600 group-hover/link:text-orange-500" />
+                <span className="font-mono text-[10px] text-zinc-500 group-hover/link:text-orange-500">
+                  TWITTER
+                </span>
+                <ExternalLink
+                  size={10}
+                  className="text-zinc-600 group-hover/link:text-orange-500"
+                />
               </a>
               <div className="absolute -bottom-2 -right-2 text-zinc-900/20 font-mono text-4xl pointer-events-none select-none font-bold">
                 0{idx + 1}
@@ -300,7 +350,9 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
       <section>
         <div className="flex items-center gap-3 mb-6 border-b border-zinc-800 pb-2">
           <Network className="w-4 h-4 text-orange-700" />
-          <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">Discovered Peers (Guests)</h2>
+          <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">
+            Discovered Peers (Guests)
+          </h2>
         </div>
         <div className="border border-zinc-900 bg-zinc-950/50">
           {/* Table Header */}
@@ -352,8 +404,8 @@ const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 const ManifestoView = () => (
   <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 w-full max-w-3xl mx-auto">
@@ -373,13 +425,17 @@ const ManifestoView = () => (
             在加密货币的世界里，这种噪音达到了顶峰：投机、欺诈、庞氏骗局和毫无意义的代币发行。
             它们不是创新，它们是干扰。
           </p>
-          <p className="mt-4">在这个充斥着噪音的宇宙中，比特币是唯一的信号。它是数学的必然，而非政治的偶然。</p>
+          <p className="mt-4">
+            在这个充斥着噪音的宇宙中，比特币是唯一的信号。它是数学的必然，而非政治的偶然。
+          </p>
         </div>
         <div>
           <h2 className="text-xl md:text-2xl font-bold text-zinc-100 mb-4 tracking-tight">
             <span className="text-orange-700">#</span> 最大主义不是教条
           </h2>
-          <p>我们被贴上"比特币最大主义者"的标签。这不是一种宗教信仰，而是一种工程推论。</p>
+          <p>
+            我们被贴上"比特币最大主义者"的标签。这不是一种宗教信仰，而是一种工程推论。
+          </p>
           <p className="mt-4">
             我们只关心去中心化。如果一个系统需要你信任它的开发者、它的基金会或它的验证节点联盟，那么它就不是革命，它只是数字化的旧世界。
             我们之所以排斥其他链，是因为它们在去中心化这个核心命题上作出了不可接受的妥协。
@@ -389,10 +445,13 @@ const ManifestoView = () => (
           <h2 className="text-xl md:text-2xl font-bold text-zinc-100 mb-4 tracking-tight">
             <span className="text-orange-700">#</span> 验证，而非信任
           </h2>
-          <p>"Don't Trust, Verify" 是我们的座右铭，也是我们制作这档播客的原则。</p>
+          <p>
+            "Don't Trust, Verify" 是我们的座右铭，也是我们制作这档播客的原则。
+          </p>
           <p className="mt-4">
             在这档节目里，我们不讨论价格预测，不推荐投资标的。我们讨论协议升级（Protocol）、代码实现（Code）、博弈论（Game
-            Theory）和自我主权（Self-Sovereignty）。 我们希望你能运行自己的全节点，掌握自己的私钥，验证我们所说的一切。
+            Theory）和自我主权（Self-Sovereignty）。
+            我们希望你能运行自己的全节点，掌握自己的私钥，验证我们所说的一切。
           </p>
         </div>
         <div>
@@ -403,7 +462,9 @@ const ManifestoView = () => (
             亿聪哲史（YiCongZheShi）的存在，是为了在噪音中提取信号。
             我们对话那些构建底层代码的人，那些维护闪电网络通道的人，那些捍卫隐私的人。
           </p>
-          <p className="mt-4">我们为密码朋克精神而声，为理性的自由主义者而设。</p>
+          <p className="mt-4">
+            我们为密码朋克精神而声，为理性的自由主义者而设。
+          </p>
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-zinc-800 text-zinc-600 text-xs select-none">
@@ -419,23 +480,30 @@ const ManifestoView = () => (
       <span className="inline-block w-2.5 h-5 bg-orange-700 animate-pulse ml-1 align-middle"></span>
     </div>
   </div>
-)
+);
 
 // --- Main Client Component ---
 interface ClientPageProps {
-  episodes: Episode[]
-  guests: Guest[]
+  episodes: Episode[];
+  guests: Guest[];
 }
 
-export default function ClientPage({ episodes = [], guests = [] }: ClientPageProps) {
-  const [currentView, setCurrentView] = useState<"list" | "detail" | "nodes" | "manifesto">("list")
-  const [selectedEpisode, setSelectedEpisode] = useState<Episode | null>(null)
-  const [blockHeight, setBlockHeight] = useState<number>(840000)
-  const [nodeCount, setNodeCount] = useState<string>("...")
-  const [previousView, setPreviousView] = useState<"list" | "detail" | "nodes" | "manifesto">("list")
-  const [copiedLightning, setCopiedLightning] = useState(false)
-  const [copiedRss, setCopiedRss] = useState(false)
-  const [searchTerm, setSearchTerm] = useState("")
+export default function ClientPage({
+  episodes = [],
+  guests = [],
+}: ClientPageProps) {
+  const [currentView, setCurrentView] = useState<
+    "list" | "detail" | "nodes" | "manifesto"
+  >("list");
+  const [selectedEpisode, setSelectedEpisode] = useState<Episode | null>(null);
+  const [blockHeight, setBlockHeight] = useState<number>(840000);
+  const [nodeCount, setNodeCount] = useState<string>("...");
+  const [previousView, setPreviousView] = useState<
+    "list" | "detail" | "nodes" | "manifesto"
+  >("list");
+  const [copiedLightning, setCopiedLightning] = useState(false);
+  const [copiedRss, setCopiedRss] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const fuse = useMemo(() => {
     return new Fuse(episodes, {
@@ -448,70 +516,77 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
       ],
       threshold: 0.4,
       includeScore: true,
-    })
-  }, [episodes])
+    });
+  }, [episodes]);
 
   const filteredEpisodes = useMemo(() => {
     if (!searchTerm.trim()) {
-      return episodes
+      return episodes;
     }
-    const results = fuse.search(searchTerm)
-    return results.map((result) => result.item)
-  }, [searchTerm, fuse, episodes])
+    const results = fuse.search(searchTerm);
+    return results.map((result) => result.item);
+  }, [searchTerm, fuse, episodes]);
 
   const handleSelectEpisode = (ep: Episode) => {
-    setPreviousView(currentView) // 保存当前视图
-    setSelectedEpisode(ep)
-    setCurrentView("detail")
-    window.scrollTo(0, 0)
-  }
+    setPreviousView(currentView); // 保存当前视图
+    setSelectedEpisode(ep);
+    setCurrentView("detail");
+    window.scrollTo(0, 0);
+  };
 
   const handleSelectEpisodeById = (episodeId: string) => {
-    const episode = episodes?.find((ep) => ep.id === episodeId)
+    const episode = episodes?.find((ep) => ep.id === episodeId);
     if (episode) {
-      handleSelectEpisode(episode)
+      handleSelectEpisode(episode);
     }
-  }
+  };
 
-  const handleViewChange = (view: "list" | "detail" | "nodes" | "manifesto") => {
-    setPreviousView(currentView)
-    setCurrentView(view)
-  }
+  const handleViewChange = (
+    view: "list" | "detail" | "nodes" | "manifesto",
+  ) => {
+    setPreviousView(currentView);
+    setCurrentView(view);
+  };
 
   const handleCopyLightning = () => {
-    navigator.clipboard.writeText("donate@yicongzheshi.com")
-    setCopiedLightning(true)
-    setTimeout(() => setCopiedLightning(false), 2000)
-  }
+    navigator.clipboard.writeText("donate@yicongzheshi.com");
+    setCopiedLightning(true);
+    setTimeout(() => setCopiedLightning(false), 2000);
+  };
 
   const handleCopyRss = () => {
-    navigator.clipboard.writeText("https://anchor.fm/s/e0b84134/podcast/rss")
-    setCopiedRss(true)
-    setTimeout(() => setCopiedRss(false), 2000)
-  }
+    navigator.clipboard.writeText("https://anchor.fm/s/e0b84134/podcast/rss");
+    setCopiedRss(true);
+    setTimeout(() => setCopiedRss(false), 2000);
+  };
 
   useEffect(() => {
     const fetchBlockHeight = async () => {
       try {
-        const response = await fetch("https://mempool.space/api/blocks/tip/height")
+        const response = await fetch(
+          "https://mempool.space/api/blocks/tip/height",
+        );
         if (response.ok) {
-          const height = await response.text()
-          setBlockHeight(Number.parseInt(height, 10))
+          const height = await response.text();
+          setBlockHeight(Number.parseInt(height, 10));
         }
       } catch (error) {
-        console.error("Failed to fetch block height:", error)
+        console.error("Failed to fetch block height:", error);
         // 保持初始值 840000 作为后备
       }
-    }
+    };
 
     const fetchNodeCount = async () => {
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 2000);
 
-        const response = await fetch("https://bitnodes.io/api/v1/snapshots/latest/", {
-          signal: controller.signal
-        });
+        const response = await fetch(
+          "https://bitnodes.io/api/v1/snapshots/latest/",
+          {
+            signal: controller.signal,
+          },
+        );
         clearTimeout(timeoutId);
 
         if (response.ok) {
@@ -526,9 +601,9 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
       }
     };
 
-    fetchBlockHeight()
-    fetchNodeCount()
-  }, [])
+    fetchBlockHeight();
+    fetchNodeCount();
+  }, []);
 
   return (
     <div className="min-h-screen bg-black text-zinc-300 p-4 md:p-8 lg:p-12 selection:bg-orange-500/30 selection:text-orange-200">
@@ -633,8 +708,12 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === "Enter" && searchTerm && (currentView === "nodes" || currentView === "manifesto")) {
-                  handleViewChange("list")
+                if (
+                  e.key === "Enter" &&
+                  searchTerm &&
+                  (currentView === "nodes" || currentView === "manifesto")
+                ) {
+                  handleViewChange("list");
                 }
               }}
               className="block w-full bg-zinc-950 border border-zinc-800 text-zinc-300 py-3 pl-16 pr-12 focus:outline-none focus:border-orange-800 transition-all font-mono text-sm placeholder:text-zinc-700"
@@ -645,8 +724,18 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                 className="absolute inset-y-0 right-0 pr-3 flex items-center text-zinc-600 hover:text-orange-700 transition-colors"
                 aria-label="Clear search"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             )}
@@ -655,7 +744,8 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
           {searchTerm && (
             <div className="mt-2 text-xs font-mono text-zinc-600">
               <span className="text-green-600">$</span> found{" "}
-              <span className="text-orange-700">{filteredEpisodes.length}</span> block(s) matching "
+              <span className="text-orange-700">{filteredEpisodes.length}</span>{" "}
+              block(s) matching "
               <span className="text-zinc-400">{searchTerm}</span>"
             </div>
           )}
@@ -663,7 +753,12 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
 
         {/* --- Main Content --- */}
         <main>
-          {currentView === "list" && <EpisodeList episodes={filteredEpisodes} onSelect={handleSelectEpisode} />}
+          {currentView === "list" && (
+            <EpisodeList
+              episodes={filteredEpisodes}
+              onSelect={handleSelectEpisode}
+            />
+          )}
           {currentView === "detail" && selectedEpisode && (
             <EpisodeDetail
               episode={selectedEpisode}
@@ -671,7 +766,12 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
               onEpisodeClick={handleSelectEpisodeById}
             />
           )}
-          {currentView === "nodes" && <NodesView guests={guests} onEpisodeClick={handleSelectEpisodeById} />}
+          {currentView === "nodes" && (
+            <NodesView
+              guests={guests}
+              onEpisodeClick={handleSelectEpisodeById}
+            />
+          )}
           {currentView === "manifesto" && <ManifestoView />}
         </main>
 
@@ -700,7 +800,11 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                     </code>
                   </div>
                   <div className="text-zinc-600 group-hover:text-zinc-400 flex-shrink-0">
-                    {copiedLightning ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+                    {copiedLightning ? (
+                      <Check size={14} className="text-green-500" />
+                    ) : (
+                      <Copy size={14} />
+                    )}
                   </div>
                 </div>
               </div>
@@ -715,7 +819,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                 </span>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://x.com/1satpod"
                     className="flex items-center gap-2 px-3 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-orange-500 hover:border-orange-700 transition-all text-[10px] uppercase font-mono"
                   >
                     <Twitter size={12} /> Twitter
@@ -735,21 +839,34 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                   Subscribe:
                 </span>
                 <div className="flex flex-wrap gap-4">
-                  {[
-                    { name: "Apple", icon: <Podcast size={12} /> },
-                    { name: "Spotify", icon: <Radio size={12} /> },
-                    { name: "YouTube", icon: <Youtube size={12} /> },
-                    { name: "Fountain", icon: <Zap size={12} /> },
-                  ].map((platform) => (
-                    <a
-                      key={platform.name}
-                      href="#"
-                      className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
-                    >
-                      {platform.icon}
-                      {platform.name}
-                    </a>
-                  ))}
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
+                  >
+                    <Podcast size={12} /> Apple
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
+                  >
+                    <Radio size={12} /> Spotify
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
+                  >
+                    <Youtube size={12} /> YouTube
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="flex items-center gap-2 px-2.5 py-1.5 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:text-zinc-200 hover:border-zinc-600 transition-all text-[10px] uppercase font-mono"
+                  >
+                    <Zap size={12} /> Fountain
+                  </a>
                 </div>
               </div>
 
@@ -762,12 +879,19 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                   className="flex items-center gap-3 bg-zinc-950 border border-zinc-900 px-3 py-1.5 hover:border-zinc-700 transition-colors cursor-pointer group flex-grow max-w-sm"
                   onClick={handleCopyRss}
                 >
-                  <Rss size={12} className="text-orange-900 group-hover:text-orange-600 flex-shrink-0" />
+                  <Rss
+                    size={12}
+                    className="text-orange-900 group-hover:text-orange-600 flex-shrink-0"
+                  />
                   <code className="text-[11px] font-mono text-zinc-600 group-hover:text-zinc-400 truncate">
                     anchor.fm/s/e0b84134/podcast/rss
                   </code>
                   <div className="ml-auto text-zinc-800 flex-shrink-0">
-                    {copiedRss ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
+                    {copiedRss ? (
+                      <Check size={12} className="text-green-500" />
+                    ) : (
+                      <Copy size={12} />
+                    )}
                   </div>
                 </div>
               </div>
@@ -782,5 +906,5 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
         </footer>
       </div>
     </div>
-  )
+  );
 }
