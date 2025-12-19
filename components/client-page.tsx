@@ -511,7 +511,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
   }
 
   const handleCopyRss = () => {
-    navigator.clipboard.writeText("https://yicongzheshi.com/rss.xml")
+    navigator.clipboard.writeText("https://anchor.fm/s/e0b84134/podcast/rss")
     setCopiedRss(true)
     setTimeout(() => setCopiedRss(false), 2000)
   }
@@ -790,7 +790,7 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
                 >
                   <Rss size={12} className="text-orange-900 group-hover:text-orange-600 flex-shrink-0" />
                   <code className="text-[11px] font-mono text-zinc-600 group-hover:text-zinc-400 truncate">
-                    yicongzheshi.com/rss.xml
+                    anchor.fm/s/e0b84134/podcast/rss
                   </code>
                   <div className="ml-auto text-zinc-800 flex-shrink-0">
                     {copiedRss ? <Check size={12} className="text-green-500" /> : <Copy size={12} />}
