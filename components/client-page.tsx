@@ -544,7 +544,6 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
       {/* Top Status Bar */}
       <div className="border-b border-zinc-900 bg-zinc-950 px-4 py-2 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest fixed top-0 left-0 right-0 z-50">
         <div className="flex items-center gap-4">
-          \
           <span className="flex items-center gap-1 text-green-600">
             <span className="w-2 h-2 rounded-full bg-green-600 animate-pulse"></span>
             Node Online: {nodeCount}
