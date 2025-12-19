@@ -524,31 +524,26 @@ export default function ClientPage({ episodes = [], guests = [] }: ClientPagePro
     }
 
     const fetchNodeCount = async () => {
-      // 主数据源：Bitnodes
       try {
-        const response = await fetch("https://bitnodes.io/api/v1/snapshots/latest/")
-        if (response.ok) {
-          const data = await response.json()
-          setNodeCount(data.total_nodes || "...")
-          return
-        }
-      } catch (error) {
-        console.error("Failed to fetch from Bitnodes:", error)
-      }
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 2000);
 
-      // 备用数据源：Blockchair
-      try {
-        const response = await fetch("https://api.blockchair.com/bitcoin/stats")
+        const response = await fetch("https://bitnodes.io/api/v1/snapshots/latest/", {
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
         if (response.ok) {
-          const data = await response.json()
-          setNodeCount(data.data?.nodes || "...")
-          return
+          const data = await response.json();
+          setNodeCount(data.total_nodes || "24000+");
+        } else {
+          setNodeCount("24000+");
         }
       } catch (error) {
-        console.error("Failed to fetch from Blockchair:", error)
-        // 保持初始值 '...'
+        console.error("Failed to fetch node count:", error);
+        setNodeCount("24000+");
       }
-    }
+    };
 
     fetchBlockHeight()
     fetchNodeCount()
