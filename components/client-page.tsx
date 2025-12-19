@@ -275,8 +275,8 @@ const EpisodeDetail = ({
 
 const NodesView = ({ guests, onEpisodeClick }: { guests: Guest[]; onEpisodeClick: (episodeId: string) => void }) => {
   const hosts = [
-    { name: "曾汨", role: "Host", twitter: "@zengmi_btc", status: "online" },
-    { name: "阿剑", role: "Host", twitter: "@ajianbtc", status: "online" },
+    { name: "曾汨", role: "Host, Bitcoin Maximalism", twitter: "@zengmi_btc", status: "online" },
+    { name: "阿剑", role: "Host, Bitcoin Maximalism", twitter: "@ajianbtc", status: "online" },
   ]
 
   return (

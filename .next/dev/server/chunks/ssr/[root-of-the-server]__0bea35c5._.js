@@ -836,13 +836,13 @@ const NodesView = ({ guests, onEpisodeClick })=>{
     const hosts = [
         {
             name: "曾汨",
-            role: "Host",
+            role: "Host, Bitcoin Maximalism",
             twitter: "@zengmi_btc",
             status: "online"
         },
         {
             name: "阿剑",
-            role: "Host",
+            role: "Host, Bitcoin Maximalism",
             twitter: "@ajianbtc",
             status: "online"
         }
