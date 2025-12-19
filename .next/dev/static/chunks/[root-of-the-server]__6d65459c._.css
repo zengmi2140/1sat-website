@@ -849,6 +849,10 @@
     margin-bottom: calc(var(--spacing) * 2);
   }
 
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -1093,6 +1097,10 @@
     justify-content: center;
   }
 
+  .justify-end {
+    justify-content: flex-end;
+  }
+
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
@@ -1293,6 +1301,16 @@
     }
   }
 
+  .bg-orange-900\/20 {
+    background-color: #7e2a0c33;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-orange-900\/20 {
+      background-color: color-mix(in oklab, var(--color-orange-900) 20%, transparent);
+    }
+  }
+
   .bg-zinc-800 {
     background-color: var(--color-zinc-800);
   }
@@ -1335,6 +1353,10 @@
 
   .p-2 {
     padding: calc(var(--spacing) * 2);
+  }
+
+  .p-2\.5 {
+    padding: calc(var(--spacing) * 2.5);
   }
 
   .p-3 {
