@@ -906,10 +906,10 @@ export default function ClientPage({
           </div>
 
           <div className="mt-16 text-center pb-12">
-            <p className="text-[10px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100">
+            <p className="text-xs text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100">
               <span className="text-zinc-300">Vires in Numeris</span> // 数字之中更有力量
             </p>
-            <p className="text-[10px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100 mt-1">
+            <p className="text-xs text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100 mt-1">
               <span className="text-zinc-300">Libertas in Cryptographia</span> // 密码学之中更有自由
             </p>
           </div>
