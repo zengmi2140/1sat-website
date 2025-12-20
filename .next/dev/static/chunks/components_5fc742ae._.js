@@ -2179,7 +2179,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 lineNumber: 912,
                                                 columnNumber: 15
                                             }, this),
-                                            "// 数字之中更有力量"
+                                            "// 以数字铸就力量"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
@@ -2212,7 +2212,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 lineNumber: 917,
                                                 columnNumber: 15
                                             }, this),
-                                            "// 密码学之中更有自由"
+                                            "// 以密码学捍卫自由"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
