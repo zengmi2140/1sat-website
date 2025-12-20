@@ -415,11 +415,9 @@ const ManifestoView = () => (
         <br />
         filename: MANIFESTO.md
         <br />
-        author:   1sat
+        author: 1sat
         <br />
-        created:  2023-05-05
-        <br />
-        status:   immutable
+        created: 2023-05-05
         <br />
         ---
       </div>
@@ -475,15 +473,12 @@ const ManifestoView = () => (
           </p>
         </div>
       </div>
-      <div className="mt-12 pt-8 border-t border-zinc-800 text-zinc-600 text-xs select-none">
-        -----BEGIN PGP SIGNATURE-----
+      <div className="mt-12 text-zinc-600 text-sm select-none">
+        ...
         <br />
-        Version: GnuPG v2.4.0 (GNU/Linux)
+        Vires in Numeris // 数字之中更有力量
         <br />
-        <br />
-        iQIzBAEBCAAdFiEE...
-        <br />
-        -----END PGP SIGNATURE-----
+        Libertas in Cryptographia // 密码学之中更有自由
       </div>
       <span className="inline-block w-2.5 h-5 bg-orange-700 animate-pulse ml-1 align-middle"></span>
     </div>

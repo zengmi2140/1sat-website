@@ -1098,22 +1098,16 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                             lineNumber: 417,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
-                        "author:   1sat",
+                        "author: 1sat",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/components/client-page.tsx",
                             lineNumber: 419,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
-                        "created:  2023-05-05",
+                        "created: 2023-05-05",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/components/client-page.tsx",
                             lineNumber: 421,
-                            columnNumber: 9
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        "status:   immutable",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                            fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 423,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
                         "---"
@@ -1136,21 +1130,21 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                             children: "#"
                                         }, void 0, false, {
                                             fileName: "[project]/components/client-page.tsx",
-                                            lineNumber: 429,
+                                            lineNumber: 427,
                                             columnNumber: 13
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " 噪音与信号"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 428,
+                                    lineNumber: 426,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "现代网络正在被熵所吞噬。信息以前所未有的速度产生，却以惊人的速度贬值。 在加密货币的世界里，这种噪音达到了顶峰：投机、欺诈、庞氏骗局和毫无意义的代币发行。 它们不是创新，它们是干扰。"
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 431,
+                                    lineNumber: 429,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1158,13 +1152,13 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                     children: "在这个充斥着噪音的宇宙中，比特币是唯一的信号。它是数学的必然，而非政治的偶然。"
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 436,
+                                    lineNumber: 434,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 427,
+                            lineNumber: 425,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1177,21 +1171,21 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                             children: "#"
                                         }, void 0, false, {
                                             fileName: "[project]/components/client-page.tsx",
-                                            lineNumber: 442,
+                                            lineNumber: 440,
                                             columnNumber: 13
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " 最大主义不是教条"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 441,
+                                    lineNumber: 439,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: '我们被贴上"比特币最大主义者"的标签。这不是一种宗教信仰，而是一种工程推论。'
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 444,
+                                    lineNumber: 442,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1199,13 +1193,13 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                     children: "我们只关心去中心化。如果一个系统需要你信任它的开发者、它的基金会或它的验证节点联盟，那么它就不是革命，它只是数字化的旧世界。 我们之所以排斥其他链，是因为它们在去中心化这个核心命题上作出了不可接受的妥协。"
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 447,
+                                    lineNumber: 445,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 440,
+                            lineNumber: 438,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1218,21 +1212,21 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                             children: "#"
                                         }, void 0, false, {
                                             fileName: "[project]/components/client-page.tsx",
-                                            lineNumber: 454,
+                                            lineNumber: 452,
                                             columnNumber: 13
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " 验证，而非信任"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 453,
+                                    lineNumber: 451,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: '"Don\'t Trust, Verify" 是我们的座右铭，也是我们制作这档播客的原则。'
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 456,
+                                    lineNumber: 454,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1240,13 +1234,13 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                     children: "在这档节目里，我们不讨论价格预测，不推荐投资标的。我们讨论协议升级（Protocol）、代码实现（Code）、博弈论（Game Theory）和自我主权（Self-Sovereignty）。 我们希望你能运行自己的全节点，掌握自己的私钥，验证我们所说的一切。"
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 459,
+                                    lineNumber: 457,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 452,
+                            lineNumber: 450,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1259,21 +1253,21 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                             children: "#"
                                         }, void 0, false, {
                                             fileName: "[project]/components/client-page.tsx",
-                                            lineNumber: 467,
+                                            lineNumber: 465,
                                             columnNumber: 13
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " 我们的使命"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 466,
+                                    lineNumber: 464,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "亿聪哲史（YiCongZheShi）的存在，是为了在噪音中提取信号。 我们对话那些构建底层代码的人，那些维护闪电网络通道的人，那些捍卫隐私的人。"
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 469,
+                                    lineNumber: 467,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1281,59 +1275,48 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                                     children: "我们为密码朋克精神而声，为理性的自由主义者而设。"
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 473,
+                                    lineNumber: 471,
                                     columnNumber: 11
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 465,
+                            lineNumber: 463,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/client-page.tsx",
-                    lineNumber: 426,
+                    lineNumber: 424,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-12 pt-8 border-t border-zinc-800 text-zinc-600 text-xs select-none",
+                    className: "mt-12 text-zinc-600 text-sm select-none",
                     children: [
-                        "-----BEGIN PGP SIGNATURE-----",
+                        "...",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                            fileName: "[project]/components/client-page.tsx",
+                            lineNumber: 478,
+                            columnNumber: 9
+                        }, ("TURBOPACK compile-time value", void 0)),
+                        "Vires in Numeris // 数字之中更有力量",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/components/client-page.tsx",
                             lineNumber: 480,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
-                        "Version: GnuPG v2.4.0 (GNU/Linux)",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                            fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 482,
-                            columnNumber: 9
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                            fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 483,
-                            columnNumber: 9
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        "iQIzBAEBCAAdFiEE...",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                            fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 485,
-                            columnNumber: 9
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        "-----END PGP SIGNATURE-----"
+                        "Libertas in Cryptographia // 密码学之中更有自由"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/client-page.tsx",
-                    lineNumber: 478,
+                    lineNumber: 476,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "inline-block w-2.5 h-5 bg-orange-700 animate-pulse ml-1 align-middle"
                 }, void 0, false, {
                     fileName: "[project]/components/client-page.tsx",
-                    lineNumber: 488,
+                    lineNumber: 483,
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0))
             ]
@@ -1492,7 +1475,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                     className: "w-2 h-2 rounded-full bg-green-600 animate-pulse"
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 627,
+                                    lineNumber: 622,
                                     columnNumber: 13
                                 }, this),
                                 "Node Online: ",
@@ -1500,12 +1483,12 @@ function ClientPage({ episodes = [], guests = [] }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 621,
+                            lineNumber: 616,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/client-page.tsx",
-                        lineNumber: 620,
+                        lineNumber: 615,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1520,7 +1503,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                     size: 12
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 638,
+                                    lineNumber: 633,
                                     columnNumber: 13
                                 }, this),
                                 "BLOCK: ",
@@ -1528,18 +1511,18 @@ function ClientPage({ episodes = [], guests = [] }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/client-page.tsx",
-                            lineNumber: 632,
+                            lineNumber: 627,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/client-page.tsx",
-                        lineNumber: 631,
+                        lineNumber: 626,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/client-page.tsx",
-                lineNumber: 619,
+                lineNumber: 614,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1563,12 +1546,12 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                     className: "w-full h-full object-contain brightness-90 group-hover:brightness-110 transition-all duration-300"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/client-page.tsx",
-                                                    lineNumber: 653,
+                                                    lineNumber: 648,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 649,
+                                                lineNumber: 644,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1582,7 +1565,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 children: "<"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 664,
+                                                                lineNumber: 659,
                                                                 columnNumber: 19
                                                             }, this),
                                                             "亿聪哲史",
@@ -1591,13 +1574,13 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 children: " />"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 666,
+                                                                lineNumber: 661,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 660,
+                                                        lineNumber: 655,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1605,19 +1588,19 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                         children: '"Bitcoin is the signal. Everything else is noise."'
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 668,
+                                                        lineNumber: 663,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 659,
+                                                lineNumber: 654,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 648,
+                                        lineNumber: 643,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -1629,7 +1612,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 children: "Signals"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 675,
+                                                lineNumber: 670,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1638,7 +1621,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 children: "Nodes"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 685,
+                                                lineNumber: 680,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1647,19 +1630,19 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 children: "Manifesto"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 695,
+                                                lineNumber: 690,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 674,
+                                        lineNumber: 669,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 647,
+                                lineNumber: 642,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1673,7 +1656,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 children: "$"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 710,
+                                                lineNumber: 705,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1681,13 +1664,13 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 children: "grep"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 711,
+                                                lineNumber: 706,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 709,
+                                        lineNumber: 704,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1703,7 +1686,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                         className: "block w-full bg-zinc-950 border border-zinc-800 text-zinc-300 py-3 pl-16 pr-12 focus:outline-none focus:border-orange-800 transition-all font-mono text-sm placeholder:text-zinc-700"
                                     }, void 0, false, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 713,
+                                        lineNumber: 708,
                                         columnNumber: 13
                                     }, this),
                                     searchTerm && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1722,23 +1705,23 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 d: "M6 18L18 6M6 6l12 12"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 741,
+                                                lineNumber: 736,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/client-page.tsx",
-                                            lineNumber: 735,
+                                            lineNumber: 730,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 730,
+                                        lineNumber: 725,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 708,
+                                lineNumber: 703,
                                 columnNumber: 11
                             }, this),
                             searchTerm && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1749,7 +1732,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                         children: "$"
                                     }, void 0, false, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 754,
+                                        lineNumber: 749,
                                         columnNumber: 15
                                     }, this),
                                     " found",
@@ -1759,7 +1742,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                         children: filteredEpisodes.length
                                     }, void 0, false, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 755,
+                                        lineNumber: 750,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -1769,20 +1752,20 @@ function ClientPage({ episodes = [], guests = [] }) {
                                         children: searchTerm
                                     }, void 0, false, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 757,
+                                        lineNumber: 752,
                                         columnNumber: 15
                                     }, this),
                                     '"'
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 753,
+                                lineNumber: 748,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/client-page.tsx",
-                        lineNumber: 646,
+                        lineNumber: 641,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1792,7 +1775,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                 onSelect: handleSelectEpisode
                             }, void 0, false, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 765,
+                                lineNumber: 760,
                                 columnNumber: 13
                             }, this),
                             currentView === "detail" && selectedEpisode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(EpisodeDetail, {
@@ -1801,7 +1784,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                 onEpisodeClick: handleSelectEpisodeById
                             }, void 0, false, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 771,
+                                lineNumber: 766,
                                 columnNumber: 13
                             }, this),
                             currentView === "nodes" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NodesView, {
@@ -1809,18 +1792,18 @@ function ClientPage({ episodes = [], guests = [] }) {
                                 onEpisodeClick: handleSelectEpisodeById
                             }, void 0, false, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 778,
+                                lineNumber: 773,
                                 columnNumber: 13
                             }, this),
                             currentView === "manifesto" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ManifestoView, {}, void 0, false, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 783,
+                                lineNumber: 778,
                                 columnNumber: 43
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/client-page.tsx",
-                        lineNumber: 763,
+                        lineNumber: 758,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -1840,7 +1823,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                     children: "Value 4 Value"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/client-page.tsx",
-                                                    lineNumber: 795,
+                                                    lineNumber: 790,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1853,12 +1836,12 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 fill: "currentColor"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 800,
+                                                                lineNumber: 795,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/client-page.tsx",
-                                                            lineNumber: 799,
+                                                            lineNumber: 794,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1869,7 +1852,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                     children: "Lightning Address"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/client-page.tsx",
-                                                                    lineNumber: 803,
+                                                                    lineNumber: 798,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
@@ -1877,13 +1860,13 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                     children: "1sat@fountain.fm"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/client-page.tsx",
-                                                                    lineNumber: 806,
+                                                                    lineNumber: 801,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/client-page.tsx",
-                                                            lineNumber: 802,
+                                                            lineNumber: 797,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1893,35 +1876,35 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 className: "text-green-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 812,
+                                                                lineNumber: 807,
                                                                 columnNumber: 23
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
                                                                 size: 14
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 814,
+                                                                lineNumber: 809,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/client-page.tsx",
-                                                            lineNumber: 810,
+                                                            lineNumber: 805,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/client-page.tsx",
-                                                    lineNumber: 798,
+                                                    lineNumber: 793,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/client-page.tsx",
-                                            lineNumber: 791,
+                                            lineNumber: 786,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 790,
+                                        lineNumber: 785,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1935,7 +1918,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                         children: "Follow us:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 825,
+                                                        lineNumber: 820,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1949,14 +1932,14 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                         size: 12
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/client-page.tsx",
-                                                                        lineNumber: 833,
+                                                                        lineNumber: 828,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     " Twitter"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 829,
+                                                                lineNumber: 824,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1967,26 +1950,26 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                         size: 12
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/client-page.tsx",
-                                                                        lineNumber: 839,
+                                                                        lineNumber: 834,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     " Nostr"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 835,
+                                                                lineNumber: 830,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 828,
+                                                        lineNumber: 823,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 824,
+                                                lineNumber: 819,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1997,7 +1980,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                         children: "Subscribe:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 846,
+                                                        lineNumber: 841,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2012,14 +1995,14 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                         size: 12
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/client-page.tsx",
-                                                                        lineNumber: 856,
+                                                                        lineNumber: 851,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     " Apple"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 851,
+                                                                lineNumber: 846,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2031,14 +2014,14 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                         size: 12
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/client-page.tsx",
-                                                                        lineNumber: 864,
+                                                                        lineNumber: 859,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     " Spotify"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 859,
+                                                                lineNumber: 854,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2050,14 +2033,14 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                         size: 12
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/client-page.tsx",
-                                                                        lineNumber: 872,
+                                                                        lineNumber: 867,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     " YouTube"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 867,
+                                                                lineNumber: 862,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2069,26 +2052,26 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                         size: 12
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/client-page.tsx",
-                                                                        lineNumber: 880,
+                                                                        lineNumber: 875,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     " Fountain"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 875,
+                                                                lineNumber: 870,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 849,
+                                                        lineNumber: 844,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 845,
+                                                lineNumber: 840,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2099,7 +2082,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                         children: "RSS Feed:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 887,
+                                                        lineNumber: 882,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2111,7 +2094,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 className: "text-orange-900 group-hover:text-orange-600 flex-shrink-0"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 894,
+                                                                lineNumber: 889,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
@@ -2119,7 +2102,7 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                 children: "anchor.fm/s/e0b84134/podcast/rss"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 898,
+                                                                lineNumber: 893,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2129,42 +2112,42 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                                     className: "text-green-500"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/client-page.tsx",
-                                                                    lineNumber: 903,
+                                                                    lineNumber: 898,
                                                                     columnNumber: 23
                                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
                                                                     size: 12
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/client-page.tsx",
-                                                                    lineNumber: 905,
+                                                                    lineNumber: 900,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/client-page.tsx",
-                                                                lineNumber: 901,
+                                                                lineNumber: 896,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/client-page.tsx",
-                                                        lineNumber: 890,
+                                                        lineNumber: 885,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 886,
+                                                lineNumber: 881,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 822,
+                                        lineNumber: 817,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 788,
+                                lineNumber: 783,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2174,30 +2157,30 @@ function ClientPage({ episodes = [], guests = [] }) {
                                     children: "Tick Tock, Next Block // Pure Signal // Don't Trust, Verify."
                                 }, void 0, false, {
                                     fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 914,
+                                    lineNumber: 909,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/client-page.tsx",
-                                lineNumber: 913,
+                                lineNumber: 908,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/client-page.tsx",
-                        lineNumber: 787,
+                        lineNumber: 782,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/client-page.tsx",
-                lineNumber: 644,
+                lineNumber: 639,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/client-page.tsx",
-        lineNumber: 617,
+        lineNumber: 612,
         columnNumber: 5
     }, this);
 }
