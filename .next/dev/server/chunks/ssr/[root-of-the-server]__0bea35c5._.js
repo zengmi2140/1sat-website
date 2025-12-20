@@ -2164,15 +2164,45 @@ function ClientPage({ episodes = [], guests = [] }) {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mt-16 text-center pb-12",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-[10px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100",
-                                    children: "Tick Tock, Next Block // Pure Signal // Don't Trust, Verify."
-                                }, void 0, false, {
-                                    fileName: "[project]/components/client-page.tsx",
-                                    lineNumber: 909,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-[10px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-zinc-300",
+                                                children: "Vires in Numeris"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/client-page.tsx",
+                                                lineNumber: 910,
+                                                columnNumber: 15
+                                            }, this),
+                                            " // 数字之中更有力量"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/client-page.tsx",
+                                        lineNumber: 909,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-[10px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100 mt-1",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-zinc-300",
+                                                children: "Libertas in Cryptographia"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/client-page.tsx",
+                                                lineNumber: 913,
+                                                columnNumber: 15
+                                            }, this),
+                                            " // 密码学之中更有自由"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/client-page.tsx",
+                                        lineNumber: 912,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/client-page.tsx",
                                 lineNumber: 908,
                                 columnNumber: 11
