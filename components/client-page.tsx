@@ -410,7 +410,7 @@ const NodesView = ({
 const ManifestoView = () => (
   <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 w-full max-w-3xl mx-auto">
     <div className="border border-zinc-800 bg-zinc-950 p-6 md:p-10 font-mono text-sm md:text-base leading-relaxed text-zinc-400 relative">
-      <div className="text-zinc-600 text-xs mb-8 select-none">
+      <div className="text-zinc-600 text-sm mb-8 select-none">
         ---
         <br />
         filename: MANIFESTO.md
