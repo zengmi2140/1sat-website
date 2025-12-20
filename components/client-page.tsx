@@ -300,7 +300,7 @@ const NodesView = ({
         <div className="flex items-center gap-3 mb-6 border-b border-zinc-800 pb-2">
           <Shield className="w-4 h-4 text-orange-700" />
           <h2 className="text-sm font-mono uppercase tracking-widest text-zinc-500">
-            Core Nodes (Hosts)
+            Seed Nodes (Hosts)
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
