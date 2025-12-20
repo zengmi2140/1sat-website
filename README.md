@@ -1,8 +1,8 @@
-# 亿聪哲史 (YiCongZheShi) - 比特币播客网站
+# 亿聪哲史 (1sat) - 播客官网
 
 ## 概述
 
-这是亿聪哲史的 Next.js 网站，一档中文比特币播客。网站展示播客单集、嘉宾信息，并提供音频播放功能。项目采用内容驱动架构，单集和嘉宾数据以 Markdown 文件存储，带有 YAML 前置元数据，在构建时解析用于静态生成。
+这是亿聪哲史的官方网站，一档中文比特币播客。网站使用 AI 工具 Replit 和 v0 构建。网站展示播客单集、嘉宾信息，并提供音频播放功能。项目采用内容驱动架构，单集和嘉宾数据以 Markdown 文件存储，带有 YAML 前置元数据，在构建时解析用于静态生成。
 
 ## 快速开始
 
@@ -151,4 +151,3 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 ## 联系方式
 
 - Twitter: [@1satpod](https://x.com/1satpod)
-- Lightning: 1sat@fountain.fm
