@@ -4,6 +4,24 @@
 
 这是亿聪哲史的 Next.js 网站，一档中文比特币播客。网站展示播客单集、嘉宾信息，并提供音频播放功能。项目采用内容驱动架构，单集和嘉宾数据以 Markdown 文件存储，带有 YAML 前置元数据，在构建时解析用于静态生成。
 
+## 快速开始
+
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 启动生产服务器
+npm start
+```
+
+开发服务器默认运行在 `http://localhost:5000`
+
 ## 系统架构
 
 ### 前端框架
@@ -48,30 +66,19 @@
 
 ### 状态栏（顶部）
 - 实时比特币网络数据展示
-- **NODE ONLINE**：从 Bitnodes.io API 获取节点数量（2秒超时，回退值："24000+"）
+- **NODE ONLINE**：从 Bitnodes.io API 获取节点数量
 - **BLOCK**：从 mempool.space API 获取当前区块高度
-- 可点击链接，悬停时显示下划线效果（节点为绿色，区块为橙色）
+- 可点击链接，悬停时显示下划线效果
 
 ### 导航视图
 - **Blocks（单集）**：主单集列表，区块链风格的区块卡片
-- **Nodes（主持人和嘉宾）**：Core Nodes（主持人）和 Discovered Peers（嘉宾）
+- **Nodes（主持人和嘉宾）**：Seed Nodes（主持人）和 Discovered Peers（嘉宾）
 - **Manifesto**：关于页面，播客理念
 
-### Core Nodes（主持人）卡片
-- 两位主持人：曾汨 和 阿剑
-- 图标：Computer（曾汨）、Server（阿剑）
-- 角色描述："Host, Bitcoin Maximalism"
-- Twitter 链接配置在 `components/client-page.tsx`（第 278-279 行）
-
-### 页脚结构
-位于 `components/client-page.tsx`（第 813-900 行）：
-- **Value 4 Value**：闪电网络地址用于捐赠（yicongzheshi@getalby.com）
-- **Follow Us**：Twitter 和 Nostr 链接（第 821-832 行）
-- **Subscribe**：平台链接，带中文注释便于识别
-  - Apple Podcasts（第 847 行）
-  - Spotify（第 855 行）
-  - YouTube（第 863 行）
-  - Fountain（第 871 行）
+### 页脚
+- **Value 4 Value**：闪电网络地址用于捐赠（1sat@fountain.fm）
+- **Follow Us**：Twitter 和 Nostr 链接
+- **Subscribe**：Apple Podcasts、Spotify、YouTube、Fountain 平台链接
 - **RSS Feed**：Anchor.fm RSS 链接，带复制功能
 
 ## 外部依赖
@@ -88,27 +95,60 @@
 - RSS Feed：https://anchor.fm/s/e0b84134/podcast/rss
 
 ### 外部 API
-- **Bitnodes.io**：比特币节点数量（https://bitnodes.io/api/v1/snapshots/latest/）
-- **Mempool.space**：当前区块高度（https://mempool.space/api/blocks/tip/height）
+- **Bitnodes.io**：比特币节点数量
+- **Mempool.space**：当前区块高度
 
 ### UI 组件
 - **Radix UI** 原语用于无障碍组件
-- **Lucide React** 图标库（Computer、Server、Monitor、Podcast、Radio、Youtube、Zap 等）
-- **react-markdown** 配合 **rehype-raw** 用于 Markdown 渲染，支持 HTML
+- **Lucide React** 图标库
+- **react-markdown** 配合 **rehype-raw** 用于 Markdown 渲染
 - **embla-carousel-react** 用于轮播
 - **cmdk** 用于命令面板功能
 
-### 无数据库
-- 本项目仅使用基于文件的内容存储
-- 目前没有数据库集成
+## 项目结构
 
-## 快速参考：关键代码位置
+```
+├── app/                  # Next.js App Router 页面
+├── components/           # React 组件
+│   ├── client-page.tsx   # 主客户端组件
+│   ├── audio-player.tsx  # 音频播放器
+│   └── ui/               # shadcn/ui 组件
+├── content/              # Markdown 内容文件
+│   ├── episodes/         # 单集 Markdown 文件
+│   └── guests/           # 嘉宾数据
+├── lib/                  # 工具函数
+│   ├── episodes.ts       # 单集解析
+│   └── guests.ts         # 嘉宾解析
+├── public/               # 静态资源
+└── styles/               # 全局样式
+```
 
-| 功能 | 文件 | 行号 |
-|------|------|------|
-| 主持人数据 | `components/client-page.tsx` | 278-279 |
-| 状态栏 | `components/client-page.tsx` | 560-615 |
-| 页脚链接 | `components/client-page.tsx` | 813-900 |
-| 订阅平台 | `components/client-page.tsx` | 845-877 |
-| 单集解析 | `lib/episodes.ts` | - |
-| 嘉宾解析 | `lib/guests.ts` | - |
+## 添加新单集
+
+1. 在 `/content/episodes/` 目录创建新的 `.md` 文件（如 `E10.md`）
+2. 添加 YAML 前置元数据：
+
+```yaml
+---
+id: "E10"
+title: "单集标题"
+date: "2024-01-01"
+duration: "1:30:00"
+hosts: ["曾汨", "阿剑"]
+guests: ["嘉宾名"]
+tags: ["比特币", "闪电网络"]
+audioUrl: "https://..."
+status: "published"
+---
+```
+
+3. 在前置元数据下方添加单集内容（Markdown 格式）
+
+## 许可证
+
+MIT License - 详见 [LICENSE](LICENSE) 文件
+
+## 联系方式
+
+- Twitter: [@1satpod](https://x.com/1satpod)
+- Lightning: 1sat@fountain.fm

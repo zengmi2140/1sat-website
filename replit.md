@@ -58,31 +58,29 @@
 
 ### 导航视图
 - **Blocks（单集）**：主单集列表，区块链风格的区块卡片
-- **Nodes（主持人和嘉宾）**：Core Nodes（主持人）和 Discovered Peers（嘉宾）
+- **Nodes（主持人和嘉宾）**：Seed Nodes（主持人）和 Discovered Peers（嘉宾）
 - **Manifesto**：关于页面，播客理念
 
-### Core Nodes（主持人）卡片
+### Seed Nodes（主持人）卡片
 - 两位主持人：曾汨 和 阿剑
 - 图标：Computer（曾汨）、Server（阿剑）
 - 角色描述："Host, Bitcoin Maximalism"
-- Twitter 链接配置在 `components/client-page.tsx`（第 278-279 行）
+
+### Manifesto 页面
+- 顶部 Header：文件元数据风格（filename、author、created、status）
+- 底部 Footer：Nostr 公钥验证信息
 
 ### 页脚结构
-位于 `components/client-page.tsx`（第 813-900 行）：
-- **Value 4 Value**：闪电网络地址用于捐赠（yicongzheshi@getalby.com）
-- **Follow Us**：Twitter 和 Nostr 链接（第 821-832 行）
-- **Subscribe**：平台链接，带中文注释便于识别
-  - Apple Podcasts（第 847 行）
-  - Spotify（第 855 行）
-  - YouTube（第 863 行）
-  - Fountain（第 871 行）
+- **Value 4 Value**：闪电网络地址用于捐赠（1sat@fountain.fm）
+- **Follow Us**：Twitter 和 Nostr 链接
+- **Subscribe**：平台链接（Apple Podcasts、Spotify、YouTube、Fountain）
 - **RSS Feed**：Anchor.fm RSS 链接，带复制功能
+- **底部标语**：拉丁文格言 + 中文翻译（响应式换行）
 
 ## 外部依赖
 
 ### 托管与部署
 - **Vercel** 用于托管和自动部署
-- **v0.app** 集成用于 AI 辅助开发（自动同步更改）
 
 ### 分析
 - **@vercel/analytics** 用于网站分析
@@ -106,14 +104,4 @@
 ### 无数据库
 - 本项目仅使用基于文件的内容存储
 - 目前没有数据库集成
-
-## 快速参考：关键代码位置
-
-| 功能 | 文件 | 行号 |
-|------|------|------|
-| 主持人数据 | `components/client-page.tsx` | 278-279 |
-| 状态栏 | `components/client-page.tsx` | 560-615 |
-| 页脚链接 | `components/client-page.tsx` | 813-900 |
-| 订阅平台 | `components/client-page.tsx` | 845-877 |
-| 单集解析 | `lib/episodes.ts` | - |
-| 嘉宾解析 | `lib/guests.ts` | - |
+- 不需要配置任何环境变量即可运行
