@@ -1782,6 +1782,12 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:mt-1 {
+      margin-top: calc(var(--spacing) * 1);
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:mb-20 {
       margin-bottom: calc(var(--spacing) * 20);
     }
@@ -1802,6 +1808,12 @@
   @media (min-width: 48rem) {
     .md\:hidden {
       display: none;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:inline {
+      display: inline;
     }
   }
 

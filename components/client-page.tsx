@@ -907,10 +907,14 @@ export default function ClientPage({
 
           <div className="mt-16 text-center pb-12">
             <p className="text-xs text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100">
-              <span className="text-zinc-300">Vires in Numeris</span> // 数字之中更有力量
+              <span className="text-zinc-300">Vires in Numeris</span>
+              <br className="md:hidden" />
+              <span className="hidden md:inline"> </span>// 数字之中更有力量
             </p>
-            <p className="text-xs text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100 mt-1">
-              <span className="text-zinc-300">Libertas in Cryptographia</span> // 密码学之中更有自由
+            <p className="text-xs text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100 mt-2 md:mt-1">
+              <span className="text-zinc-300">Libertas in Cryptographia</span>
+              <br className="md:hidden" />
+              <span className="hidden md:inline"> </span>// 密码学之中更有自由
             </p>
           </div>
         </footer>

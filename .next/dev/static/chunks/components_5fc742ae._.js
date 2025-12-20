@@ -2164,7 +2164,22 @@ function ClientPage({ episodes = [], guests = [] }) {
                                                 lineNumber: 910,
                                                 columnNumber: 15
                                             }, this),
-                                            " // 数字之中更有力量"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                                                className: "md:hidden"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/client-page.tsx",
+                                                lineNumber: 911,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "hidden md:inline",
+                                                children: " "
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/client-page.tsx",
+                                                lineNumber: 912,
+                                                columnNumber: 15
+                                            }, this),
+                                            "// 数字之中更有力量"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
@@ -2172,21 +2187,36 @@ function ClientPage({ episodes = [], guests = [] }) {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-xs text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100 mt-1",
+                                        className: "text-xs text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-100 mt-2 md:mt-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-zinc-300",
                                                 children: "Libertas in Cryptographia"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/client-page.tsx",
-                                                lineNumber: 913,
+                                                lineNumber: 915,
                                                 columnNumber: 15
                                             }, this),
-                                            " // 密码学之中更有自由"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                                                className: "md:hidden"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/client-page.tsx",
+                                                lineNumber: 916,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "hidden md:inline",
+                                                children: " "
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/client-page.tsx",
+                                                lineNumber: 917,
+                                                columnNumber: 15
+                                            }, this),
+                                            "// 密码学之中更有自由"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/client-page.tsx",
-                                        lineNumber: 912,
+                                        lineNumber: 914,
                                         columnNumber: 13
                                     }, this)
                                 ]
