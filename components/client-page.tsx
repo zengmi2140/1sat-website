@@ -411,9 +411,17 @@ const ManifestoView = () => (
   <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 w-full max-w-3xl mx-auto">
     <div className="border border-zinc-800 bg-zinc-950 p-6 md:p-10 font-mono text-sm md:text-base leading-relaxed text-zinc-400 relative">
       <div className="text-zinc-600 text-xs mb-8 select-none">
-        -----BEGIN PGP SIGNED MESSAGE-----
+        ---
         <br />
-        Hash: SHA256
+        filename: MANIFESTO.md
+        <br />
+        author:   1sat
+        <br />
+        created:  2023-05-05
+        <br />
+        status:   immutable
+        <br />
+        ---
       </div>
       <div className="space-y-8">
         <div>
