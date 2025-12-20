@@ -476,9 +476,9 @@ const ManifestoView = () => (
       <div className="mt-12 text-zinc-600 text-sm select-none">
         ...
         <br />
-        Vires in Numeris // 数字之中更有力量
+        VERIFY AUTHOR IDENTITY via NOSTR:
         <br />
-        Libertas in Cryptographia // 密码学之中更有自由
+        npub1uueww5jpx3nxld06uy36tq9cvztteuepxru038vm74kexx7x8sgs44nmra
       </div>
       <span className="inline-block w-2.5 h-5 bg-orange-700 animate-pulse ml-1 align-middle"></span>
     </div>

@@ -1299,13 +1299,13 @@ const ManifestoView = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$p
                             lineNumber: 478,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
-                        "Vires in Numeris // 数字之中更有力量",
+                        "VERIFY AUTHOR IDENTITY via NOSTR:",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/components/client-page.tsx",
                             lineNumber: 480,
                             columnNumber: 9
                         }, ("TURBOPACK compile-time value", void 0)),
-                        "Libertas in Cryptographia // 密码学之中更有自由"
+                        "npub1uueww5jpx3nxld06uy36tq9cvztteuepxru038vm74kexx7x8sgs44nmra"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/client-page.tsx",
