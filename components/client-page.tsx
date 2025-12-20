@@ -473,7 +473,7 @@ const ManifestoView = () => (
           </p>
         </div>
       </div>
-      <div className="mt-12 text-zinc-600 text-sm select-none">
+      <div className="mt-12 text-zinc-600 text-sm select-none break-all">
         ...
         <br />
         VERIFY AUTHOR IDENTITY via NOSTR:
