@@ -87,9 +87,6 @@ const EpisodeList = ({
           >
             {/* Height (EP#) */}
             <div className="md:col-span-1 flex items-center md:block">
-              <span className="md:hidden text-zinc-600 font-mono text-xs mr-2">
-                EP:
-              </span>
               <span className="font-mono text-orange-700/80 group-hover:text-orange-500 transition-colors">
                 {ep.id}
               </span>
