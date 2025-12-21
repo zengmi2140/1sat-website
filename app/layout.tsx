@@ -16,7 +16,7 @@ const _libreBaskerville = Libre_Baskerville({
 })
 
 export const metadata: Metadata = {
-  title: "YiCongZheShi | 亿聪哲史",
+  title: "亿聪哲史",
   description:
     "Bitcoin is the signal. Everything else is noise. A Chinese Bitcoin podcast focused on protocol, code, and self-sovereignty.",
   generator: "v0.app",
