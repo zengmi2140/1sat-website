@@ -51,8 +51,16 @@ npm start
 - 音频文件托管在 Anchor.fm/Cloudfront CDN
 
 ### 核心组件
-- `app/page.tsx` - 服务端组件，获取所有单集和嘉宾
-- `components/client-page.tsx` - 主客户端组件，处理 UI、导航和搜索
+- `app/page.tsx` - 首页，服务端获取单集和嘉宾数据
+- `app/nodes/page.tsx` - Nodes（主持人和嘉宾）页面
+- `app/manifesto/page.tsx` - Manifesto（宣言）页面
+- `app/episodes/[id]/page.tsx` - 单集详情页面，支持静态生成
+- `components/home-page.tsx` - 首页客户端组件，处理搜索和单集列表
+- `components/shared-layout.tsx` - 共享布局组件，包含状态栏、Header、Footer
+- `components/episode-list.tsx` - 单集列表组件
+- `components/episode-detail.tsx` - 单集详情展示组件
+- `components/nodes-view.tsx` - Nodes 视图组件
+- `components/manifesto-view.tsx` - Manifesto 视图组件
 - `components/audio-player.tsx` - 自定义音频播放控件
 - `lib/episodes.ts` - 服务端从 Markdown 文件解析单集
 - `lib/guests.ts` - 服务端从 Markdown 中的 YAML 解析嘉宾
@@ -70,10 +78,11 @@ npm start
 - **BLOCK**：从 mempool.space API 获取当前区块高度
 - 可点击链接，悬停时显示下划线效果
 
-### 导航视图
-- **Blocks（单集）**：主单集列表，区块链风格的区块卡片
-- **Nodes（主持人和嘉宾）**：Seed Nodes（主持人）和 Discovered Peers（嘉宾）
-- **Manifesto**：关于页面，播客理念
+### 导航和页面路由
+- **首页** (`/`)：主单集列表，带搜索功能，区块链风格的区块卡片
+- **Nodes** (`/nodes`)：Seed Nodes（主持人）和 Discovered Peers（嘉宾）页面
+- **Manifesto** (`/manifesto`)：播客宣言和理念页面
+- **单集详情** (`/episodes/E00`, `/episodes/E01` 等)：每一集的独立可分享页面，包含完整内容、音频播放器和嘉宾信息
 
 ### 页脚
 - **Value 4 Value**：闪电网络地址用于捐赠（1sat@fountain.fm）
@@ -108,41 +117,76 @@ npm start
 ## 项目结构
 
 ```
-├── app/                  # Next.js App Router 页面
-├── components/           # React 组件
-│   ├── client-page.tsx   # 主客户端组件
-│   ├── audio-player.tsx  # 音频播放器
-│   └── ui/               # shadcn/ui 组件
-├── content/              # Markdown 内容文件
-│   ├── episodes/         # 单集 Markdown 文件
-│   └── guests/           # 嘉宾数据
-├── lib/                  # 工具函数
-│   ├── episodes.ts       # 单集解析
-│   └── guests.ts         # 嘉宾解析
-├── public/               # 静态资源
-└── styles/               # 全局样式
+├── app/                          # Next.js App Router 页面
+│   ├── page.tsx                  # 首页
+│   ├── nodes/
+│   │   └── page.tsx              # Nodes 页面
+│   ├── manifesto/
+│   │   └── page.tsx              # Manifesto 页面
+│   └── episodes/
+│       └── [id]/
+│           └── page.tsx          # 单集详情页面
+├── components/                   # React 组件
+│   ├── home-page.tsx             # 首页组件
+│   ├── shared-layout.tsx         # 共享布局
+│   ├── episode-list.tsx          # 单集列表
+│   ├── episode-detail.tsx        # 单集详情
+│   ├── nodes-view.tsx            # Nodes 视图
+│   ├── manifesto-view.tsx        # Manifesto 视图
+│   ├── audio-player.tsx          # 音频播放器
+│   └── ui/                       # shadcn/ui 组件
+├── content/                      # Markdown 内容文件
+│   ├── episodes/                 # 单集 Markdown 文件（E00.md、E01.md 等）
+│   └── guests/                   # 嘉宾数据（guests.md）
+├── lib/                          # 工具函数
+│   ├── episodes.ts               # 单集解析
+│   └── guests.ts                 # 嘉宾解析
+├── public/                       # 静态资源
+└── styles/                       # 全局样式
 ```
 
 ## 添加新单集
 
-1. 在 `/content/episodes/` 目录创建新的 `.md` 文件（如 `E10.md`）
-2. 添加 YAML 前置元数据：
+### 快速流程
+只需在 `/content/episodes/` 目录创建新的 Markdown 文件，网站会自动生成对应的页面和路由。
 
-```yaml
+### 详细步骤
+
+1. **创建新文件**：在 `/content/episodes/` 目录创建新的 `.md` 文件（如 `E24.md`）
+
+2. **添加 YAML 前置元数据和内容**：
+
+```markdown
 ---
-id: "E10"
+id: "E24"
 title: "单集标题"
-date: "2024-01-01"
-duration: "1:30:00"
+date: "2025-01-15"
+duration: "45m"
+category: "对谈"
 hosts: ["曾汨", "阿剑"]
-guests: ["嘉宾名"]
-tags: ["比特币", "闪电网络"]
+guests: ["嘉宾名字"]
+tags: ["标签1", "标签2"]
 audioUrl: "https://..."
 status: "published"
 ---
+
+## 简介
+
+这里写节目简介...
+
+## 内容
+
+这里写详细内容...
 ```
 
-3. 在前置元数据下方添加单集内容（Markdown 格式）
+### 自动功能
+- 新单集自动在首页显示
+- 自动生成独立的页面路由：`/episodes/E24`
+- 支持搜索新单集的内容和标签
+- 可在任何单集页面分享具体链接
+
+### 添加新嘉宾
+如果有新嘉宾，需要在 `/content/guests/guests.md` 中添加对应信息
 
 ## 许可证
 
