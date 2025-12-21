@@ -617,7 +617,7 @@ export default function ClientPage({
     const fetchNodeCount = async () => {
       try {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 2000);
+        const timeoutId = setTimeout(() => controller.abort(), 4000);
 
         const response = await fetch(
           "https://bitnodes.io/api/v1/snapshots/latest/",
