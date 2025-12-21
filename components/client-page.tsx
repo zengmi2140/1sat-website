@@ -629,13 +629,13 @@ export default function ClientPage({
 
         if (response.ok) {
           const data = await response.json();
-          setNodeCount(data.total_nodes || "24000+");
+          setNodeCount(data.total_nodes || "20000+");
         } else {
-          setNodeCount("24000+");
+          setNodeCount("20000+");
         }
       } catch (error) {
         console.error("Failed to fetch node count:", error);
-        setNodeCount("24000+");
+        setNodeCount("20000+");
       }
     };
 
