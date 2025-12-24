@@ -135,7 +135,7 @@ export default function SharedLayout({
             <div className="flex items-center gap-6">
               <Link
                 href="/"
-                className="w-16 h-16 md:w-20 md:h-20 p-2 bg-zinc-950 flex-shrink-0 group cursor-pointer overflow-hidden"
+                className="w-20 h-20 md:w-20 md:h-20 p-2 bg-zinc-950 flex-shrink-0 group cursor-pointer overflow-hidden"
               >
                 <img
                   src="/images/logo.png"

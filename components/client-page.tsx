@@ -700,7 +700,7 @@ export default function ClientPage({
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="flex items-center gap-6">
               <div
-                className="w-16 h-16 md:w-20 md:h-20 p-2 bg-zinc-950 flex-shrink-0 group cursor-pointer overflow-hidden"
+                className="w-20 h-20 md:w-20 md:h-20 p-2 bg-zinc-950 flex-shrink-0 group cursor-pointer overflow-hidden"
                 onClick={() => handleViewChange("list")}
               >
                 <img
