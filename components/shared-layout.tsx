@@ -280,7 +280,7 @@ export default function SharedLayout({
             {/* Right: Uplinks & Relays (3 Stacked Rows) */}
             <div className="md:w-[65%] flex flex-col justify-center gap-3">
               {/* Row 1: Follow Us */}
-              <div className="flex flex-wrap items-center gap-3 md:gap-6">
+              <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
                 <span className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest w-20 flex-shrink-0">
                   Follow us:
                 </span>
