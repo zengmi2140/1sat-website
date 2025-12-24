@@ -40,32 +40,55 @@ export default function EpisodeList({ episodes }: EpisodeListProps) {
           <Link
             key={ep.id}
             href={`/episodes/${ep.id}`}
-            className="group grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 p-3 md:p-2 border border-zinc-900 hover:border-orange-900/50 hover:bg-zinc-900/50 cursor-pointer transition-all duration-200 rounded md:rounded-none block"
+            className="group block p-3 md:p-2 border border-zinc-900 hover:border-orange-900/50 hover:bg-zinc-900/50 cursor-pointer transition-all duration-200 rounded md:rounded-none md:grid md:grid-cols-12 md:gap-4"
           >
-            {/* Height (EP#) */}
-            <div className="md:col-span-1 flex items-center md:block">
+            {/* Mobile Layout: 3 rows */}
+            <div className="md:hidden flex flex-col gap-1.5">
+              {/* Row 1: Episode ID */}
+              <div className="font-mono text-orange-700/80 group-hover:text-orange-500 transition-colors text-sm">
+                {ep.id}
+              </div>
+              {/* Row 2: Title */}
+              <div className="text-zinc-300 font-mono text-sm group-hover:text-white font-bold">
+                {ep.title}
+              </div>
+              {/* Row 3: Date + Duration + Tags */}
+              <div className="flex items-center gap-3 flex-wrap">
+                <span className="text-zinc-500 font-mono text-xs">{ep.date}</span>
+                <span className="text-zinc-600">|</span>
+                <span className="text-zinc-500 font-mono text-xs">{ep.duration}</span>
+                <div className="flex gap-1.5 overflow-hidden">
+                  {ep.tags.slice(0, 2).map((tag, i) => (
+                    <span
+                      key={i}
+                      className="text-[10px] font-mono border border-zinc-800 px-1.5 py-0.5 text-zinc-600 group-hover:text-zinc-400 group-hover:border-zinc-700 transition-colors uppercase whitespace-nowrap"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                  {ep.tags.length > 2 && (
+                    <span className="text-[10px] text-zinc-700">...</span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Layout: Table row (hidden on mobile) */}
+            <div className="hidden md:col-span-1 md:flex items-center">
               <span className="font-mono text-orange-700/80 group-hover:text-orange-500 transition-colors">
                 {ep.id}
               </span>
             </div>
-
-            {/* Date */}
-            <div className="md:col-span-2 flex items-center text-zinc-500 font-mono text-xs">
+            <div className="hidden md:col-span-2 md:flex items-center text-zinc-500 font-mono text-xs">
               {ep.date}
             </div>
-
-            {/* Topic */}
-            <div className="md:col-span-5 text-zinc-300 font-mono text-sm group-hover:text-white font-bold truncate">
+            <div className="hidden md:col-span-5 md:flex items-center text-zinc-300 font-mono text-sm group-hover:text-white font-bold truncate">
               {ep.title}
             </div>
-
-            {/* Size (Duration Only) */}
-            <div className="md:col-span-1 flex items-center text-zinc-500 font-mono text-xs">
+            <div className="hidden md:col-span-1 md:flex items-center text-zinc-500 font-mono text-xs">
               {ep.duration}
             </div>
-
-            {/* OP_RETURN (Tags) */}
-            <div className="md:col-span-3 flex items-center gap-2 overflow-hidden">
+            <div className="hidden md:col-span-3 md:flex items-center gap-2 overflow-hidden">
               <div className="flex gap-1.5 overflow-hidden">
                 {ep.tags.slice(0, 2).map((tag, i) => (
                   <span
