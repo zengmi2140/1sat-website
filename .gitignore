@@ -41,3 +41,7 @@ replit.md
 # Misc
 *.log
 .vercel
+
+# Local File
+1sat-agent/
+
