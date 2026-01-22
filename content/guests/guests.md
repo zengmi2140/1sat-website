@@ -58,7 +58,7 @@ description: "亿聪哲史播客嘉宾名录"
 - name: "Kurt Pan"
   desc: "ZKPunk, Crypto Primitive"
   twitter: "@"
-  episodes: ["E11"]
+  episodes: ["E11", "E24"]
 
 - name: "陈东"
   desc: "Keystone CTO"
