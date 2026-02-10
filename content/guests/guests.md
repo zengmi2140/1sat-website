@@ -18,12 +18,12 @@ description: "亿聪哲史播客嘉宾名录"
 - name: "姚翔"
   desc: "原语里弄发起人"
   twitter: "@TimeOfSand"
-  episodes: ["E01", "E03", "E08", "E10", "E12"] 
+  episodes: ["E01", "E03", "E08", "E10", "E12", "E25"] 
 
 - name: "张瑜"
   desc: "bitcoiner"
   twitter: "@realoctoshi⁠"
-  episodes: ["E01", "E03", "E08", "E13", "E14"]
+  episodes: ["E01", "E03", "E08", "E13", "E14", "E25"]
 
 - name: "刘力心"
   desc: "Keystone 硬件钱包创始人"
@@ -33,7 +33,7 @@ description: "亿聪哲史播客嘉宾名录"
 - name: "Jeffrey Hu"
   desc: "HashKey Capital 技术总监"
   twitter: "@jeffrey_hu"
-  episodes: ["E03", "E08", "E13", "E14", "E15", "E17", "E20", "E22"]   
+  episodes: ["E03", "E08", "E13", "E14", "E15", "E17", "E20", "E22", "E25"]   
 
 - name: "大山"
   desc: "水滴资本联合创始人"
