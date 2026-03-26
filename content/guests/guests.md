@@ -79,6 +79,11 @@ description: "亿聪哲史播客嘉宾名录"
   desc: "《Mastering Taproot》作者"
   twitter: "@zzmjxy"
   episodes: ["E21", "E23"]
+
+- name: "达哥"
+  desc: "独立比特币软件开发者"
+  twitter: "@BtcDage"
+  episodes: ["E26"]
 ```
 
 ---
